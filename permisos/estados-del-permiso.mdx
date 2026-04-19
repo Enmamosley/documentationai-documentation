@@ -11,16 +11,16 @@ Cada permiso de trabajo pasa por diferentes estados durante su ciclo de vida.
 
 | Estado | Significado |
 |---|---|
-| <span class="status status--pendiente">:material-clock-outline: Pendiente de Revisión</span> | Esperando revisión de AtC |
-| <span class="status status--en-uso">:material-magnify: En Revisión Departamental</span> | Departamento técnico revisando |
-| <span class="status status--pendiente">:material-check-circle-outline: Pendiente Aprobación Final</span> | Esperando visto bueno de AtC |
-| <span class="status status--aprobado">:material-check-decagram: Aprobado</span> | QR y PDF generados, listo para usar |
-| <span class="status status--en-uso">:material-run: En Uso</span> | Personal ingresó, trabajo en curso |
-| <span class="status status--aprobado">:material-check-all: Completado</span> | Salida registrada, trabajo terminado |
-| <span class="status status--rechazado">:material-close-circle: Rechazado</span> | Rechazado con observaciones |
-| <span class="status status--vencido">:material-timer-off: Vencido</span> | No se presentó a tiempo |
-| <span class="status status--cancelado">:material-cancel: Cancelado</span> | Cancelado por el solicitante, administrador o por automatizacion |
-| <span class="status status--rechazado">:material-shield-off: Cancelado por CCO</span> | Cancelado por CCO/Admin |
+| <span class="status status--pendiente">Pendiente de Revisión</span> | Esperando revisión de AtC |
+| <span class="status status--en-uso">En Revisión Departamental</span> | Departamento técnico revisando |
+| <span class="status status--pendiente">Pendiente Aprobación Final</span> | Esperando visto bueno de AtC |
+| <span class="status status--aprobado">Aprobado</span> | QR y PDF generados, listo para usar |
+| <span class="status status--en-uso">En Uso</span> | Personal ingresó, trabajo en curso |
+| <span class="status status--aprobado">Completado</span> | Salida registrada, trabajo terminado |
+| <span class="status status--rechazado">Rechazado</span> | Rechazado con observaciones |
+| <span class="status status--vencido">Vencido</span> | No se presentó a tiempo |
+| <span class="status status--cancelado">Cancelado</span> | Cancelado por el solicitante, administrador o por automatizacion |
+| <span class="status status--rechazado">Cancelado por CCO</span> | Cancelado por CCO/Admin |
 
 ## Diagrama del flujo de estados
 
@@ -59,7 +59,7 @@ Los permisos creados por el departamento de Mantenimiento saltan directamente al
 </Callout>
 ## Descripción de cada estado
 
-### :material-clock-outline: Pendiente de Revisión
+### Pendiente de Revisión
 
 El permiso fue enviado y está esperando que **Atención al Cliente** lo revise, clasifique el riesgo y asigne una actividad del catálogo.
 
@@ -68,7 +68,7 @@ El permiso fue enviado y está esperando que **Atención al Cliente** lo revise,
 
 ---
 
-### :material-magnify: En Revisión Departamental
+### En Revisión Departamental
 
 Atencion al Cliente clasifico el permiso como riesgo **medio** o **alto** y lo remitio al departamento tecnico correspondiente. Este estado tambien se usa para flujos directos como **Pabellon M** o **Sistemas Especiales**.
 
@@ -77,7 +77,7 @@ Atencion al Cliente clasifico el permiso como riesgo **medio** o **alto** y lo r
 
 ---
 
-### :material-check-circle-outline: Pendiente de Aprobación Final
+### Pendiente de Aprobación Final
 
 El departamento técnico aprobó el permiso desde su perspectiva. Ahora Atención al Cliente debe dar el **visto bueno final**.
 
@@ -86,7 +86,7 @@ El departamento técnico aprobó el permiso desde su perspectiva. Ahora Atenció
 
 ---
 
-### :material-check-decagram: Aprobado
+### Aprobado
 
 El permiso fue **aprobado**. Se genero automaticamente el **codigo QR** y el **PDF** del permiso.
 
@@ -102,7 +102,7 @@ Cuando tu permiso es aprobado, recibirás notificaciones con el enlace para desc
 </Callout>
 ---
 
-### :material-run: En Uso
+### En Uso
 
 El guardia escaneó el código QR y registró la **entrada** del personal. El trabajo está en curso.
 
@@ -112,7 +112,7 @@ El guardia escaneó el código QR y registró la **entrada** del personal. El tr
 
 ---
 
-### :material-check-all: Completado
+### Completado
 
 El guardia escaneó el código QR para registrar la **salida**. El trabajo terminó exitosamente.
 
@@ -120,7 +120,7 @@ El guardia escaneó el código QR para registrar la **salida**. El trabajo termi
 
 ---
 
-### :material-close-circle: Rechazado
+### Rechazado
 
 El permiso fue rechazado durante alguna etapa de revisión (por Atención al Cliente o por el departamento técnico). Se incluye el motivo del rechazo con un mínimo de 10 caracteres de observaciones.
 
@@ -128,7 +128,7 @@ El permiso fue rechazado durante alguna etapa de revisión (por Atención al Cli
 
 ---
 
-### :material-timer-off: Vencido
+### Vencido
 
 El permiso fue aprobado pero el personal **no se presento** dentro del tiempo establecido, o la fecha de salida ya expiro sin uso valido.
 
@@ -140,7 +140,7 @@ El permiso fue aprobado pero el personal **no se presento** dentro del tiempo es
 
 ---
 
-### :material-cancel: Cancelado
+### Cancelado
 
 El permiso fue cancelado antes de entrar en uso.
 
@@ -156,7 +156,7 @@ Los permisos que permanecen en etapas pendientes de aprobacion y cuya hora de en
 </Callout>
 ---
 
-### :material-shield-off: Cancelado por CCO
+### Cancelado por CCO
 
 El permiso fue cancelado por el **CCO** (Centro de Control Operacional) o un **Administrador**. Este es un estado separado del cancelado normal.
 

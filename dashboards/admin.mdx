@@ -1,0 +1,41 @@
+---
+title: Dashboard Administrador
+description: Guia operativa del sistema de permisos de trabajo.
+---
+
+# Dashboard Administrador
+
+El dashboard de **Administrador** ofrece la vista más completa del estado del sistema con pestañas organizadas.
+
+## Vista general
+
+Al iniciar sesión como Administrador, verás:
+
+### Tarjetas de resumen (con caché de 5 minutos)
+
+- Estadísticas generales del sistema (permisos por estado, totales, etc.)
+
+### 7 Pestañas de trabajo
+
+| Pestaña | Contenido |
+|---|---|
+| **Pendientes de revisión** | Permisos en estado `pendiente_revision` |
+| **En revisión departamental** | Permisos remitidos a departamentos técnicos |
+| **Pendientes aprobación final** | Permisos aprobados por departamento, esperando visto bueno |
+| **Aprobados** | Permisos aprobados listos para usar |
+| **Activos (En Uso)** | Permisos con personal en sitio |
+| **Rechazados** | Permisos rechazados |
+| **Todos** | Vista completa de todos los permisos |
+
+<Callout kind="info">
+**Carga por pestañas**
+
+Las pestañas se cargan de forma individual (lazy loading) para mantener el rendimiento. Solo se carga la pestaña que estás viendo.
+
+</Callout>
+## Accesos desde el menú
+
+- **Empresas** — CRUD completo de empresas
+- **Usuarios** — CRUD completo de usuarios
+- **Auditoría** — Logs de todas las acciones del sistema
+- **Papelera** — Permisos eliminados (soft delete) con opción de restaurar o eliminar permanentemente

@@ -1,0 +1,122 @@
+---
+title: Preguntas Frecuentes
+description: Guia operativa del sistema de permisos de trabajo.
+---
+
+# Preguntas Frecuentes
+
+## Permisos de Trabajo
+
+### ¿Puedo crear un permiso para cualquier fecha?
+
+No. El sistema no permite crear permisos en fechas que tengan **horarios bloqueados**. Si ves un mensaje de bloqueo al seleccionar la fecha, contacta al administrador.
+
+### ¿Cuánto tiempo tengo para usar mi permiso?
+
+El permiso es válido desde la **fecha de entrada** hasta la **fecha de salida** que indicaste. Si el permiso ha sido aprobado pero no lo usas antes de la fecha de salida, su estado cambiará automáticamente a **Vencido**.
+
+### ¿Puedo agregar más técnicos después de crear el permiso?
+
+No. La lista de técnicos se define al momento de crear el permiso y no puede modificarse después.
+
+### ¿Cuántos técnicos puedo incluir?
+
+Al menos **1 técnico** es obligatorio. Cada técnico requiere un **nombre completo** y opcionalmente su **NSS** (Número de Seguro Social, 11 dígitos).
+
+### ¿Por qué mi permiso fue rechazado?
+
+El revisor debe incluir un **motivo de rechazo** (mínimo 10 caracteres) al rechazar un permiso. Puedes ver el motivo en el detalle del permiso.
+
+---
+
+## Aprobación y Revisión
+
+### ¿Quién revisa mi permiso?
+
+Depende de quién lo creó:
+
+- **Proveedor / Contacto**: El permiso pasa a revisión por **Atención al Cliente**, quien asigna la clasificación de riesgo y la actividad correspondiente.
+- **Mantenimiento**: Los permisos creados por el rol Mantenimiento se **aprueban automáticamente**, sin pasar por revisión.
+
+### ¿Cómo se determina la clasificación de riesgo?
+
+La clasificación de riesgo (**bajo**, **medio** o **alto**) es asignada **manualmente** por el personal de Atención al Cliente durante la revisión del permiso, basándose en la actividad seleccionada del catálogo.
+
+### ¿Qué pasa si mi permiso es de riesgo medio o alto?
+
+Después de la revisión de Atención al Cliente, el permiso es **remitido a un departamento** (Mantenimiento, Operaciones o Seguridad) para una segunda revisión. Tras la aprobación departamental, pasa a **aprobación final** por Atención al Cliente.
+
+### ¿Cuánto tarda la aprobación?
+
+El tiempo depende de la disponibilidad de los revisores. Los permisos de **riesgo bajo** requieren solo una revisión. Los de **riesgo medio o alto** requieren dos revisiones adicionales.
+
+---
+
+## Acceso y QR
+
+### ¿Cómo funciona el código QR?
+
+Al aprobarse el permiso, se genera un **código QR** único que contiene el **folio** del permiso (formato `PM-YYYYMMDD-NNNN`). Este QR puede descargarse como **PDF** o compartirse directamente.
+
+### ¿Qué pasa si escaneo el QR fuera de horario?
+
+El sistema valida las fechas del permiso al escanear. Si el permiso no está vigente, el escaneo será rechazado. Existe una **tolerancia de 30 minutos** sobre la hora de vencimiento.
+
+### ¿Puedo registrar entrada y salida múltiples veces?
+
+No. Cada permiso permite **un solo registro de entrada** y **un solo registro de salida**. No se permiten registros dobles.
+
+### ¿Qué verifica el guardia al escanear?
+
+El sistema verifica automáticamente:
+
+- Estado del permiso (**aprobado** para entrada, **en uso** para salida)
+- Vigencia de las fechas
+- Que no exista un registro previo de entrada o salida
+- Los datos del permiso: empresa, técnicos, área de trabajo
+
+---
+
+## Cancelación
+
+### ¿Puedo cancelar un permiso aprobado?
+
+Sí. El **contacto** que creó el permiso puede cancelar permisos en estado **aprobado**. Debe proporcionar un **motivo de cancelación** (mínimo 10 caracteres).
+
+### ¿Puede CCO cancelar un permiso en uso?
+
+Sí. El **Centro de Control de Operaciones (CCO)** puede cancelar permisos tanto **aprobados** como **en uso**. En este caso, el estado cambia a **Cancelado por CCO** (`cancelado_cco`).
+
+---
+
+## Notificaciones
+
+### ¿Qué notificaciones recibo?
+
+El sistema envía notificaciones por **correo electrónico** y como **notificaciones internas** en los siguientes eventos:
+
+- Permiso creado
+- Permiso aprobado
+- Permiso rechazado
+- Permiso remitido a departamento Seguridad
+- Permiso cancelado
+
+### ¿Puedo activar notificaciones por WhatsApp?
+
+Existe el campo de **notificaciones WhatsApp** en el perfil de usuario, pero su disponibilidad depende de la configuración del sistema.
+
+---
+
+## Cuenta y Acceso
+
+### ¿Cómo obtengo acceso al sistema?
+
+El acceso es proporcionado por el **Administrador del sistema**. Contacta a la administración de Pabellón M para solicitar tus credenciales.
+
+### ¿Puedo cambiar mi contraseña?
+
+Sí. Puedes cambiar tu contraseña desde tu **perfil de usuario** o solicitar un restablecimiento a través de la pantalla de inicio de sesión.
+
+### ¿Qué roles existen en el sistema?
+
+El sistema cuenta con **8 roles**: Administrador, Atención al Cliente, CCO, Mantenimiento, Seguridad, Operaciones, Guardia y Contacto. Cada uno tiene permisos y vistas específicas.

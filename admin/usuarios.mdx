@@ -1,0 +1,67 @@
+---
+title: Gestión de Usuarios
+description: Guia operativa del sistema de permisos de trabajo.
+---
+
+# Gestión de Usuarios
+
+Los **Administradores** pueden crear, editar y gestionar las cuentas de usuario del sistema.
+
+## Acceder
+
+1. Navega a **Administración → Usuarios**
+2. Verás el listado de todos los usuarios registrados
+
+## Crear usuario
+
+1. Haz clic en **Nuevo Usuario**
+2. Completa la información:
+
+| Campo | Descripción | Obligatorio |
+|---|---|---|
+| **Nombre** | Nombre completo del usuario | ✅ |
+| **Correo electrónico** | Será su usuario de acceso (único) | ✅ |
+| **Contraseña** | Contraseña temporal | ✅ |
+| **Teléfono** | Número telefónico (máx. 20 caracteres) | No |
+| **Notificaciones WhatsApp** | Activar/desactivar notificaciones por WhatsApp | No |
+| **Rol** | Selecciona el rol adecuado (ver abajo) | ✅ |
+| **Empresa** | Solo para rol Contacto — selecciona la empresa | Solo Contacto |
+
+### Roles disponibles
+
+| Rol | Identificador | Descripción |
+|---|---|---|
+| Administrador | `admin` | Control total del sistema |
+| Contacto | `contacto` | Locatario — crea permisos (requiere empresa) |
+| Atención al Cliente | `atencion_cliente` | Revisión y aprobación de permisos |
+| Mantenimiento | `mantenimiento` | Departamento técnico + creación propia |
+| Operaciones | `operaciones` | Departamento técnico |
+| Seguridad | `seguridad` | Departamento técnico |
+| CCO | `cco` | Centro de Control Operacional |
+| Guardia | `guardia` | Control de acceso QR |
+
+3. Haz clic en **Guardar**
+
+## Editar usuario
+
+1. Busca el usuario en el listado
+2. Haz clic en **Editar**
+3. Modifica los campos necesarios
+4. Haz clic en **Guardar Cambios**
+
+## Activar / Desactivar usuario
+
+Cada usuario tiene un estado **activo/inactivo**:
+
+<Callout kind="alert">
+**Usuarios desactivados**
+
+Un usuario desactivado no podrá iniciar sesión hasta que un administrador lo reactive.
+
+</Callout>
+## Notas importantes
+
+- El **correo electrónico** es el identificador de acceso y debe ser único
+- Los usuarios con rol **Contacto** deben tener una **empresa** asignada
+- La **contraseña** se almacena encriptada (hashed)
+- Consulta la sección de [Roles y Perfiles](../primeros-pasos/roles) para entender qué puede hacer cada rol

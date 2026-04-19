@@ -1,72 +1,164 @@
 ---
 title: Estados del Permiso
-description: Conoce los estados disponibles para un permiso y qué significa cada uno.
+description: Guia operativa del sistema de permisos de trabajo.
 ---
 
-## Estados del Permiso
+# Estados del Permiso
 
-Un permiso cambia de estado conforme avanza su revisión y autorización. En esta página ves el significado práctico de cada estado y qué debes esperar en cada paso.
+Cada permiso de trabajo pasa por diferentes estados durante su ciclo de vida.
+
+## Resumen rápido
+
+| Estado | Significado |
+|---|---|
+| <span class="status status--pendiente">:material-clock-outline: Pendiente de Revisión</span> | Esperando revisión de AtC |
+| <span class="status status--en-uso">:material-magnify: En Revisión Departamental</span> | Departamento técnico revisando |
+| <span class="status status--pendiente">:material-check-circle-outline: Pendiente Aprobación Final</span> | Esperando visto bueno de AtC |
+| <span class="status status--aprobado">:material-check-decagram: Aprobado</span> | QR y PDF generados, listo para usar |
+| <span class="status status--en-uso">:material-run: En Uso</span> | Personal ingresó, trabajo en curso |
+| <span class="status status--aprobado">:material-check-all: Completado</span> | Salida registrada, trabajo terminado |
+| <span class="status status--rechazado">:material-close-circle: Rechazado</span> | Rechazado con observaciones |
+| <span class="status status--vencido">:material-timer-off: Vencido</span> | No se presentó a tiempo |
+| <span class="status status--cancelado">:material-cancel: Cancelado</span> | Cancelado por el solicitante |
+| <span class="status status--rechazado">:material-shield-off: Cancelado por CCO</span> | Cancelado por CCO/Admin |
+
+## Diagrama del flujo de estados
+
+```mermaid
+graph TD
+    A[Pendiente de Revisión] -->|AtC revisa y clasifica| B{¿Nivel de riesgo?}
+    B -->|Bajo: AtC aprueba| G[Aprobado]
+    B -->|Medio / Alto: AtC remite| C[En Revisión Departamental]
+    C -->|Departamento aprueba| E[Pendiente de Aprobación Final]
+    C -->|Departamento rechaza| F[Rechazado]
+    E -->|AtC da visto bueno| G
+    E -->|AtC rechaza| F
+    G -->|Guardia escanea QR entrada| H[En Uso]
+    H -->|Guardia escanea QR salida| I[Completado]
+    G -->|No se presenta en 30 min| J[Vencido]
+    A -->|Solicitante cancela| K[Cancelado]
+    C -->|Solicitante cancela| K
+    E -->|Solicitante cancela| K
+    G -->|CCO o Admin cancela| L[Cancelado por CCO]
+    H -->|CCO o Admin cancela| L
+
+    style G fill:#4caf50,color:#fff
+    style H fill:#2196f3,color:#fff
+    style I fill:#009688,color:#fff
+    style F fill:#f44336,color:#fff
+    style J fill:#ff9800,color:#fff
+    style K fill:#9e9e9e,color:#fff
+    style L fill:#795548,color:#fff
+```
+
+<Callout kind="tip">
+**Permisos de Mantenimiento**
+
+Los permisos creados por el departamento de Mantenimiento saltan directamente al estado **Aprobado** (se auto-aprueban).
+
+</Callout>
+## Descripción de cada estado
+
+### :material-clock-outline: Pendiente de Revisión
+
+El permiso fue enviado y está esperando que **Atención al Cliente** lo revise, clasifique el riesgo y asigne una actividad del catálogo.
+
+- **¿Quién lo ve?** Atención al Cliente y Administrador
+- **¿Qué puede hacer el solicitante?** Esperar o cancelar el permiso
+
+---
+
+### :material-magnify: En Revisión Departamental
+
+Atención al Cliente clasificó el permiso como riesgo **medio** o **alto** y lo remitió al departamento técnico correspondiente (Mantenimiento, Operaciones o Seguridad).
+
+- **¿Quién lo ve?** El departamento asignado y Administrador
+- **¿Qué puede hacer el solicitante?** Esperar o cancelar el permiso
+
+---
+
+### :material-check-circle-outline: Pendiente de Aprobación Final
+
+El departamento técnico aprobó el permiso desde su perspectiva. Ahora Atención al Cliente debe dar el **visto bueno final**.
+
+- **¿Quién lo ve?** Atención al Cliente y Administrador
+- **¿Qué puede hacer el solicitante?** Esperar o cancelar el permiso
+
+---
+
+### :material-check-decagram: Aprobado
+
+El permiso fue **aprobado**. Se generó automáticamente el **código QR** y el **PDF** del permiso.
+
+- **¿Quién lo ve?** Todos los involucrados
+- **¿Qué recibe el solicitante?** Notificación por sistema, email y/o WhatsApp con enlace para descargar el PDF
+- **Siguiente paso:** Presentarse con el QR el día del trabajo
+
+<Callout kind="tip">
+**Permiso aprobado**
+
+Cuando tu permiso es aprobado, recibirás notificaciones con el enlace para descargar el PDF. El enlace funciona sin necesidad de iniciar sesión.
+
+</Callout>
+---
+
+### :material-run: En Uso
+
+El guardia escaneó el código QR y registró la **entrada** del personal. El trabajo está en curso.
+
+- **Visible en:** Dashboard del CCO en tiempo real
+- **¿Qué significa?** El personal ya ingresó y está trabajando
+- **¿Quién puede cancelar?** Solo CCO o Administrador
+
+---
+
+### :material-check-all: Completado
+
+El guardia escaneó el código QR para registrar la **salida**. El trabajo terminó exitosamente.
+
+- **Estado final** — No requiere más acciones
+
+---
+
+### :material-close-circle: Rechazado
+
+El permiso fue rechazado durante alguna etapa de revisión (por Atención al Cliente o por el departamento técnico). Se incluye el motivo del rechazo con un mínimo de 10 caracteres de observaciones.
+
+- **¿Qué puede hacer el solicitante?** Crear un nuevo permiso corrigiendo las observaciones
+
+---
+
+### :material-timer-off: Vencido
+
+El permiso fue aprobado pero el personal **no se presentó** dentro del tiempo establecido.
+
+- **Tolerancia:** 30 minutos después de la hora de entrada programada
+- **Proceso automático:** El sistema vence permisos no usados automáticamente
+- **También vence si:** La fecha/hora de salida ya pasó
+- **¿Qué puede hacer el solicitante?** Crear un nuevo permiso
+
+---
+
+### :material-cancel: Cancelado
+
+El permiso fue cancelado por el **solicitante** (contacto) antes de ser usado.
+
+- **El solicitante puede cancelar en:** Cualquier estado previo a "En Uso"
+- **Requiere:** Motivo de cancelación (mínimo 10 caracteres)
+- **Solo sus propios permisos** en estado "Aprobado"
 
 <Callout kind="info">
-**Resumen**
+**Cancelación automática**
 
-- El permiso puede pasar por distintos estados durante su revisión.
-- Cuando el permiso llega a **Aprobado**, el sistema genera automáticamente el PDF del permiso.
-- El PDF incluye el número de folio, datos de la empresa, tipo de actividad y nivel de riesgo, ubicación del trabajo, fecha y horario autorizado, lista de técnicos con foto y código QR.
+Los permisos que permanecen en estado "Pendiente de Revisión" y cuya hora de entrada ya pasó (con 15 minutos de tolerancia) se cancelan automáticamente.
+
 </Callout>
+---
 
-## Estados
+### :material-shield-off: Cancelado por CCO
 
-### Aprobado
+El permiso fue cancelado por el **CCO** (Centro de Control Operacional) o un **Administrador**. Este es un estado separado del cancelado normal.
 
-El permiso ya recibió autorización y quedó listo para usarse.
-
-**Señales habituales**
-
-- El sistema genera automáticamente el PDF del permiso.
-- Puedes descargar el documento desde la vista del permiso.
-- El PDF muestra los datos autorizados para ejecutar el trabajo.
-
-**Qué hacer**
-
-- Revisa que el folio, la ubicación, la fecha y el horario coincidan con lo solicitado.
-- Comparte el PDF con tu equipo si lo necesitas para el acceso o la ejecución del trabajo.
-
-### Otros estados
-
-Si tu permiso todavía no está aprobado, el sistema lo mantiene en revisión hasta que complete el flujo correspondiente.
-
-**Señales habituales**
-
-- El PDF todavía no aparece.
-- El permiso sigue sin habilitación para ejecución.
-- Debes revisar el seguimiento del permiso para confirmar si falta información o autorización.
-
-**Qué hacer**
-
-- Verifica el avance del trámite en el seguimiento del permiso.
-- Corrige cualquier dato pendiente si el sistema te lo solicita.
-
-<Callout kind="alert">
-Si un permiso no cambia de estado, normalmente sigue pendiente de revisión o de alguna validación previa. Revisa el seguimiento antes de volver a enviarlo.
-</Callout>
-
-## Flujo sugerido
-
-1. Crea el permiso con la información completa.
-2. Da seguimiento al estado hasta que llegue a **Aprobado**.
-3. Descarga el PDF y compártelo con el personal que ejecutará el trabajo.
-
-## Siguiente paso
-
-<Columns cols={2}>
-
-<Card title="Seguimiento del permiso" href="/permisos/seguimiento" icon="bar-chart" cta="Ver seguimiento">
-Revisa el avance de un permiso y confirma si ya fue aprobado.
-</Card>
-
-<Card title="Crear un permiso" href="/permisos/crear-un-permiso" icon="plus" cta="Crear permiso">
-Registra un nuevo permiso con la información necesaria para enviarlo a revisión.
-</Card>
-
-</Columns>
+- **¿Quién puede?** Solo CCO y Administrador
+- **¿En qué estados?** Permisos en estado "Aprobado" o "En Uso"
+- **Requiere:** Motivo de cancelación (mínimo 10 caracteres)

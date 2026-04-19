@@ -1,0 +1,57 @@
+---
+title: Actividades y Clasificación de Riesgo
+description: Guia operativa del sistema de permisos de trabajo.
+---
+
+# Actividades y Clasificación de Riesgo
+
+El catálogo de **actividades** define los tipos de trabajo disponibles en el sistema, cada uno con su clasificación de riesgo.
+
+## Acceder
+
+1. Navega a **Administración → Actividades**
+2. Verás el listado de actividades registradas
+
+## Campos de una actividad
+
+| Campo | Descripción | Obligatorio |
+|---|---|---|
+| **Nombre** | Nombre descriptivo de la actividad (ej: "Trabajo eléctrico", "Pintura") | ✅ |
+| **Clasificación de riesgo** | Nivel de riesgo: Bajo, Medio o Alto | ✅ |
+| **Activo** | Si la actividad está disponible para su uso | ✅ |
+
+## Crear actividad
+
+1. Haz clic en **Nueva Actividad**
+2. Ingresa el **nombre** de la actividad
+3. Selecciona la **clasificación de riesgo**:
+    - :material-circle:{ style="color: #4caf50" } **Bajo** — No requiere revisión departamental
+    - :material-circle:{ style="color: #ff9800" } **Medio** — Requiere revisión departamental
+    - :material-circle:{ style="color: #f44336" } **Alto** — Requiere revisión departamental
+4. Haz clic en **Guardar**
+
+## Activar / Desactivar actividad
+
+Puedes activar o desactivar actividades sin eliminarlas. Solo las actividades **activas** aparecen para selección.
+
+## ¿Cómo se usan las actividades?
+
+<Callout kind="info">
+**Las actividades se asignan durante la revisión**
+
+Las actividades **no las selecciona el solicitante** al crear el permiso. Es **Atención al Cliente** quien asigna la actividad del catálogo durante la revisión del permiso. La clasificación de riesgo de la actividad ayuda a AtC a decidir si aprobar directamente (bajo) o remitir a un departamento (medio/alto).
+
+</Callout>
+<Callout kind="info">
+**El departamento NO viene de la actividad**
+
+La actividad solo tiene nombre y clasificación de riesgo. El **departamento técnico** al que se remite el permiso lo decide Atención al Cliente manualmente al momento de la remisión.
+
+</Callout>
+## Actividades de Mantenimiento (tabla separada)
+
+Existe un catálogo independiente de **actividades de mantenimiento** que se usa exclusivamente para los permisos creados por el rol Mantenimiento:
+
+- Son actividades con solo un **nombre** (sin clasificación de riesgo)
+- Se muestran como sugerencias de autocompletado en el formulario de creación
+- Los permisos de mantenimiento se auto-aprueban independientemente de la actividad

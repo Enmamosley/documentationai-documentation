@@ -1,96 +1,90 @@
 ---
 title: Scanner de Guardia
-description: Cómo operar el scanner para validar accesos del personal.
+description: Guia operativa del sistema de permisos de trabajo.
 ---
 
-## Introducción
+# Scanner de Guardia
 
-El Scanner de Guardia te permite validar permisos de acceso desde el dashboard de scanner QR. Desde ahí puedes escanear un código QR para ver los datos del permiso y registrar entrada o salida con validaciones automáticas.
+El módulo de **Scanner de Guardia** permite al personal de seguridad verificar y registrar el acceso de contratistas mediante códigos QR.
 
-## Objetivo
+## Acceder al scanner
 
-Usa el scanner para confirmar si un permiso es válido, vencido o inválido, y registra el movimiento correspondiente sin salir del flujo de validación. Si no tienes el QR a la mano, puedes buscar por folio como respaldo.
+1. Inicia sesión con tu cuenta de **Guardia**
+2. En tu dashboard, haz clic en **Scanner QR**
+3. Se activará la cámara del dispositivo
 
 <Callout kind="tip">
+**Dispositivo recomendado**
 
-Mantén la cámara limpia, sostén el dispositivo a una distancia estable y trabaja con buena iluminación para reducir errores de lectura.
+Usa una tablet o celular con cámara en buen estado para una lectura rápida del QR.
 
 </Callout>
+## Escanear un QR
 
-## Flujo de operación
+1. Apunta la cámara hacia el **código QR** del permiso
+2. El sistema leerá automáticamente el **folio** del código
+3. Verás en pantalla la información del permiso:
+    - Folio y estado actual
+    - Empresa proveedora
+    - Nombre y NSS del trabajador
+    - Área de trabajo y descripción
+    - Horario autorizado
+    - Empresa/local asociado (nombre comercial y local/área)
+    - Indicador de si está **vigente** o **vencido**
+    - Último escaneo registrado
 
-- Inicia sesión en el dashboard de Scanner QR.
-- Activa la cámara o el lector de QR.
-- Escanea el código del permiso o busca por folio si no puedes leer el QR.
-- Revisa el estado del permiso y los datos mostrados.
-- Registra la entrada o salida según corresponda.
+## Registrar entrada
 
-## Pasos
+Si el permiso es válido:
 
-<Steps>
-  <Step title="Inicia sesión">
-    Entra al dashboard de Scanner QR con tu cuenta de guardia u operador. Al abrir la pantalla, verifica que tengas acceso al módulo de escaneo.
-  </Step>
-
-  <Step title="Activa el scanner">
-    Abre el lector de QR desde la pantalla principal y confirma que la cámara esté lista para leer códigos.
-  </Step>
-
-  <Step title="Escanea el permiso">
-    Apunta la cámara al QR del permiso. Mantén el código centrado para que la lectura sea más rápida y estable.
-  </Step>
-
-  <Step title="Revisa la validación">
-    Confirma el estado mostrado por el sistema antes de continuar. El scanner aplica validaciones automáticas para ayudarte a decidir si el acceso procede.
-  </Step>
-
-  <Step title="Registra la entrada o salida">
-    Si el permiso es válido, registra el movimiento correspondiente desde el mismo flujo de validación.
-  </Step>
-
-  <Step title="Usa folio si no hay QR">
-    Si el código no se puede leer, busca por folio y revisa la información del permiso antes de registrar el acceso.
-  </Step>
-</Steps>
-
-### Estados de validación
-
-- **Válido** — El permiso puede procesarse. El estado se muestra en verde.
-- **Vencido** — El permiso ya no está vigente. El estado se muestra en naranja.
-- **Inválido** — El permiso no es aceptado para acceso. El estado se muestra en rojo.
-
-## Errores comunes y qué hacer
+1. Verifica que la persona corresponda con los datos del permiso
+2. Opcionalmente agrega **observaciones** (máx. 500 caracteres)
+3. Haz clic en **Registrar Entrada**
+4. El estado del permiso cambia a **En Uso**
+5. Se registra la hora exacta de entrada
 
 <Callout kind="alert">
+**Validaciones automáticas al registrar entrada**
 
-Si la cámara no detecta el QR, limpia la lente, ajusta la distancia y mejora la iluminación antes de volver a intentar.
+El sistema verifica automáticamente:
 
-</Callout>
+- Que el permiso esté en estado **Aprobado** (o activo)
+- Que **no esté vencido** (más de 30 minutos después de la hora de entrada, o que la fecha de salida no haya pasado)
+- Que **no haya una entrada previa** sin salida registrada (previene doble entrada)
 
-<Callout kind="alert">
-
-Si el sistema muestra un permiso vencido o inválido, no continúes con el registro hasta confirmar el folio o validar la información con el área correspondiente.
-
-</Callout>
-
-<Callout kind="alert">
-
-Si el QR no carga, usa la búsqueda por folio como respaldo para localizar el permiso.
+Si el permiso está vencido al momento del escaneo, el sistema lo actualiza automáticamente a estado **Vencido** y no permite el registro.
 
 </Callout>
+## Registrar salida
 
-## Verificación
+Cuando el personal termine su trabajo:
 
-La validación fue exitosa cuando el sistema muestra los datos correctos del permiso, el estado coincide con la revisión esperada y puedes registrar la entrada o salida sin errores. En ese momento, el movimiento queda listo para su seguimiento operativo.
+1. Escanea nuevamente el código QR (o busca por folio)
+2. Opcionalmente agrega **observaciones** (máx. 500 caracteres)
+3. Haz clic en **Registrar Salida**
+4. El estado del permiso cambia a **Completado**
 
-## Siguientes pasos
+<Callout kind="info">
+**Validación de salida**
 
-<Columns cols={2}>
-  <Card title="Código QR" href="/acceso/codigo-qr" icon="qr-code">
-    Consulta cómo se genera y se usa el código QR para el acceso.
-  </Card>
+El sistema verifica que exista una **entrada registrada** sin salida previa. No se puede registrar salida si no hay entrada, ni si ya se registró una salida anterior.
 
-  <Card title="Registro de entrada y salida" href="/acceso/registro-entrada-y-salida" icon="check-circle">
-    Revisa el flujo para registrar movimientos una vez validado el permiso.
-  </Card>
-</Columns>
+</Callout>
+## Búsqueda por folio {#busqueda-por-folio}
+
+Si el QR no funciona, puedes buscar el permiso manualmente:
+
+1. Haz clic en **Buscar por Folio** en tu dashboard
+2. Ingresa el número de folio del permiso (ej: `PM-20260307-0001`)
+3. Verás la misma información que al escanear el QR, incluyendo:
+    - Datos del solicitante y su empresa
+    - Quién revisó y aprobó el permiso
+    - Historial de escaneos previos
+
+## Alertas del scanner
+
+| Alerta | Significado |
+|---|---|
+| :material-check-circle:{ style="color: green" } **Válido** | El permiso está aprobado y puede registrar entrada |
+| :material-alert:{ style="color: orange" } **Vencido** | Pasaron más de 30 min desde la hora de entrada o la fecha de salida ya pasó |
+| :material-close-circle:{ style="color: red" } **Inválido** | El permiso no existe, está cancelado, rechazado, ya fue completado, o ya tiene entrada sin salida |

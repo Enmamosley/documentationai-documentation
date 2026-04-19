@@ -1,0 +1,64 @@
+---
+title: Auditoría
+description: Guia operativa del sistema de permisos de trabajo.
+---
+
+# Auditoría
+
+El sistema registra automáticamente todas las acciones realizadas por los usuarios, proporcionando un historial completo para fines de auditoría y seguridad.
+
+## Acceder
+
+1. Navega a **Administración → Auditoría**
+2. Verás el registro de acciones del sistema
+
+<Callout kind="info">
+**Solo Administradores**
+
+El módulo de auditoría solo es accesible para usuarios con rol de Administrador.
+
+</Callout>
+## ¿Qué se registra?
+
+Cada acción en el sistema queda registrada con:
+
+| Campo | Descripción |
+|---|---|
+| **Fecha y hora** | Momento exacto de la acción |
+| **Usuario** | Quién realizó la acción |
+| **Acción** | Qué hizo (crear, editar, eliminar, aprobar, rechazar, etc.) |
+| **Módulo** | En qué sección del sistema (permisos, usuarios, empresas, etc.) |
+| **Detalles** | Información específica de la acción |
+| **IP** | Dirección IP desde donde se realizó |
+
+## Filtrar registros
+
+Puedes filtrar los logs de auditoría por:
+
+- **Rango de fechas**
+- **Usuario específico**
+- **Tipo de acción**
+- **Módulo**
+
+## Exportar registros
+
+Los registros de auditoría pueden exportarse para análisis externo o archivo:
+
+1. Aplica los filtros deseados
+2. Haz clic en **Exportar**
+3. Selecciona el formato (CSV, Excel)
+
+## Ejemplos de acciones registradas
+
+- Usuario X **creó** un permiso de trabajo (folio PM-2025-001)
+- Usuario Y **aprobó** el permiso PM-2025-001
+- Usuario Z **registró entrada** del permiso PM-2025-001
+- Administrador **modificó** la empresa "Contratistas SA"
+- Usuario X **inició sesión** desde 192.168.1.100
+
+<Callout kind="alert">
+**Registros inalterables**
+
+Los registros de auditoría no pueden ser modificados ni eliminados, garantizando la integridad del historial.
+
+</Callout>

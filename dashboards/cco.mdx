@@ -1,0 +1,45 @@
+---
+title: Dashboard CCO
+description: Guia operativa del sistema de permisos de trabajo.
+---
+
+# Dashboard CCO
+
+El **Centro de Control Operacional (CCO)** tiene un dashboard de monitoreo en tiempo real.
+
+## Secciones del dashboard (con caché de 5 minutos)
+
+| Sección | Contenido |
+|---|---|
+| **Permisos activos** | Permisos actualmente en estado **En Uso** (personal en sitio) |
+| **Permisos de hoy** | Permisos aprobados programados para hoy |
+| **Permisos próximos** | Permisos aprobados para los próximos 30 días |
+| **Historial reciente** | Permisos aprobados, completados y vencidos de los últimos 30 días |
+| **Escaneos recientes** | Últimos 20 escaneos QR registrados en el día |
+
+## API en tiempo real
+
+El dashboard del CCO cuenta con una **API de actualización** que permite consultar permisos activos:
+
+- Endpoint: `/api/cco/activos`
+- Límite: 60 solicitudes por minuto (rate limiting)
+- Datos incluyen: permisos en uso con detalles completos
+
+## Cancelación de permisos
+
+El CCO tiene la capacidad de **cancelar permisos** en los siguientes estados:
+
+- **Aprobado** — Cancelar antes de que el personal se presente
+- **En Uso** — Cancelar mientras el personal está en sitio (emergencia)
+
+Los permisos cancelados por CCO quedan en estado **cancelado_cco** (diferente al cancelado por usuario).
+
+<Callout kind="alert">
+**Cancelación en uso**
+
+La cancelación de un permiso en uso solo debe realizarse en situaciones de emergencia o incumplimiento de normas.
+
+</Callout>
+## Uso recomendado
+
+El dashboard del CCO está diseñado para ser mostrado en un **monitor dedicado** en el centro de control, permitiendo al equipo de operaciones tener visibilidad constante de las actividades en curso dentro del centro comercial.

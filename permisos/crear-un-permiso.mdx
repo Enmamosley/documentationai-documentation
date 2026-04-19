@@ -1,85 +1,107 @@
 ---
-title: "Crear un Permiso"
-description: "Guía paso a paso para completar el formulario, adjuntar documentos y enviar la solicitud."
+title: Crear un Permiso de Trabajo
+description: Guia operativa del sistema de permisos de trabajo.
 ---
 
-## Crear un Permiso
+# Crear un Permiso de Trabajo
 
-Esta página te guía para crear una solicitud de permiso de trabajo desde el formulario de Pabellón M, desde la captura inicial hasta el envío para revisión o aprobación.
+Esta guía te muestra paso a paso cómo crear un nuevo permiso de trabajo.
 
 <Callout kind="info">
+**¿Quién puede crear permisos?**
 
-**Requisitos**
-
-- Acceso al formulario de **Nuevo Permiso** o a **Permisos → Crear Permiso**.
-- Datos de la empresa proveedora y del trabajo a realizar.
-- Información de al menos un técnico.
-- Documentos opcionales, si necesitas adjuntarlos.
+Los roles **Contacto (Locatario)**, **Mantenimiento** y **Administrador** pueden crear permisos de trabajo.
 
 </Callout>
+## Paso 1: Acceder al formulario
 
-## Paso a paso
+1. Inicia sesión en el sistema
+2. En tu dashboard, haz clic en **Nuevo Permiso** o navega a **Permisos → Crear Permiso**
 
-<Steps>
-  <Step title="Acceder al formulario">
+## Paso 2: Información del trabajo
 
-Abre el formulario desde **Nuevo Permiso** o desde **Permisos → Crear Permiso**. Solo los roles **Contacto** (Locatario), **Mantenimiento** y **Administrador** pueden crear permisos.
+Completa la información del permiso:
 
-  </Step>
-  <Step title="Información del trabajo">
+| Campo | Descripción | Obligatorio |
+|---|---|---|
+| **Empresa proveedora** | Nombre de la empresa que realizará el trabajo | ✅ |
+| **Área de trabajo** | Dónde se realizará el trabajo (mín. 3 caracteres) | ✅ |
+| **Descripción** | Detalle del trabajo a realizar (mín. 10 caracteres) | ✅ |
+| **Fecha de entrada** | Cuándo inicia el trabajo (debe ser hoy o posterior) | ✅ |
+| **Fecha de salida** | Cuándo termina el trabajo (debe ser posterior a la entrada) | ✅ |
 
-Completa la empresa proveedora, el área, la descripción y las fechas del trabajo. El sistema valida bloqueos de horario para evitar conflictos con otros permisos o actividades ya programadas.
+<Callout kind="info">
+**Para usuarios Contacto**
 
-  </Step>
-  <Step title="Registrar técnicos">
+Si tu rol es **Contacto**, la información de tu empresa (nombre comercial, local/área, nombre del contacto) se muestra automáticamente como referencia en el formulario.
 
-Agrega al menos un técnico responsable del trabajo. Revisa que los datos de cada técnico sean correctos antes de continuar, porque forman parte del registro del permiso.
-
-  </Step>
-  <Step title="Documentos adjuntos">
-
-Adjunta los documentos que necesites incluir en la solicitud. El sistema acepta archivos **PDF, JPG, JPEG y PNG**, con un máximo de **5 archivos**, tamaño máximo de **5 MB** por archivo y tamaño mínimo de **10 KB**.
-
-  </Step>
-  <Step title="Campos adicionales para Mantenimiento">
-
-Si tu rol es **Mantenimiento**, verás campos adicionales en el formulario. En ese caso, el permiso se aprueba automáticamente al enviarlo.
-
-  </Step>
-  <Step title="Revisar y enviar">
-
-Verifica que la información del trabajo, los técnicos y los adjuntos estén completos y correctos. Cuando envías el formulario, el sistema inicia el flujo correspondiente según tu rol.
-
-  </Step>
-  <Step title="Qué sucede después">
-
-Si eres **Contacto**, el permiso entra al proceso de aprobación. **Atención al Cliente** clasifica el riesgo y, según el caso, el permiso puede pasar a revisión departamental y aprobación final.
-
-Si eres **Mantenimiento**, el permiso se aprueba automáticamente al enviarlo. Al final del proceso, el sistema genera el PDF y el código QR del permiso.
-
-  </Step>
-</Steps>
-
-## Consejos para evitar errores
-
-- Confirma que las fechas del trabajo no choquen con bloqueos de horario.
-- Revisa que hayas agregado al menos un técnico antes de enviar.
-- Verifica que los adjuntos estén en un formato permitido y dentro del tamaño máximo.
-- Asegúrate de que la información de la empresa proveedora y del área sea correcta.
-- Si tu rol es Mantenimiento, revisa los campos adicionales antes de continuar.
-
+</Callout>
 <Callout kind="alert">
+**Bloqueos de horario**
 
-**Importante**
-
-Al enviar la solicitud, el sistema inicia el flujo de revisión o confirmación según tu rol. Si tu permiso entra a revisión, mantente atento a solicitudes adicionales de validación o aprobación.
+Al seleccionar fechas, el sistema verifica automáticamente si hay bloqueos de horario activos. Si hay conflicto, se te notificará y no podrás enviar el permiso hasta elegir un horario disponible.
 
 </Callout>
+## Paso 3: Registrar técnicos
 
-## Siguiente
+Agrega la información de cada persona que realizará el trabajo:
 
-<Columns cols={1}>
-  <Card title="Qué es un permiso" href="/permisos/que-es-un-permiso" icon="book-open" horizontal={true}>
-    Consulta la definición del permiso y el contexto general antes de crear una nueva solicitud.
-  </Card>
-</Columns>
+1. Completa los datos del primer técnico (ya viene un campo por defecto)
+2. Para agregar más técnicos, haz clic en **Agregar Técnico**
+3. Datos por cada técnico:
+    - **Nombre completo** (obligatorio, mín. 3 caracteres, solo letras y espacios)
+    - **NSS** (opcional, exactamente 11 dígitos numéricos)
+
+<Callout kind="tip">
+**Mínimo un técnico**
+
+Debes registrar al menos un técnico para poder enviar el permiso. Puedes agregar tantos como necesites.
+
+</Callout>
+## Paso 4: Documentos adjuntos (opcional)
+
+Puedes adjuntar documentos de soporte:
+
+- **Formatos aceptados:** PDF, JPG, JPEG, PNG
+- **Tamaño máximo:** 5 MB por archivo
+- **Cantidad máxima:** 5 archivos
+- **Tamaño mínimo:** 10 KB por archivo
+
+## Campos adicionales para Mantenimiento
+
+Si tu rol es **Mantenimiento**, verás campos adicionales:
+
+| Campo | Descripción | Obligatorio |
+|---|---|---|
+| **Actividad de mantenimiento** | Tipo de actividad (con autocompletado del catálogo) | ✅ |
+| **Listado de técnicos** | Archivo con listado (PDF, XLSX, XLS, CSV, JPG, PNG; máx. 10MB) | No |
+| **Enviar correo a** | Email para notificar sobre el permiso | No |
+
+<Callout kind="tip">
+**Aprobación automática**
+
+Los permisos creados por el departamento de Mantenimiento se **aprueban automáticamente**. No pasan por el proceso de revisión. Verás un aviso en el formulario indicando esto.
+
+</Callout>
+## Paso 5: Revisar y enviar
+
+1. Revisa toda la información ingresada
+2. Verifica que los datos de los técnicos sean correctos
+3. Haz clic en **Enviar Permiso**
+
+## ¿Qué sigue después?
+
+### Si eres Contacto
+
+Tu permiso entra al [proceso de aprobación](../aprobacion/flujo-general):
+
+1. **Revisión por Atención al Cliente** — Evalúan tu solicitud y asignan clasificación de riesgo
+2. Si es riesgo bajo → aprobación directa
+3. Si es riesgo medio/alto → **Revisión Departamental**
+4. **Aprobación final** — Se genera el código QR y PDF
+
+### Si eres Mantenimiento
+
+Tu permiso se **aprueba automáticamente** y recibirás el PDF con el código QR de inmediato.
+
+Puedes [dar seguimiento al estado de tu permiso](seguimiento-de-permisos) en cualquier momento.

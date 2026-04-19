@@ -1,77 +1,73 @@
 ---
 title: Revisión de Atención al Cliente
-description: Cómo se revisa una solicitud antes de pasar a la revisión departamental.
+description: Guia operativa del sistema de permisos de trabajo.
 ---
 
-## Revisión de Atención al Cliente
+# Revisión de Atención al Cliente
 
-Atención al Cliente revisa los permisos pendientes desde su dashboard. Primero valida la información básica de la solicitud y decide si avanza, se remite a un departamento o se rechaza.
+Esta sección explica el proceso de revisión que realiza el personal de **Atención al Cliente**.
 
 ## Acceder a permisos pendientes
 
-En el dashboard aparecen los permisos pendientes de revisión y los pendientes de aprobación final. Desde ahí puedes abrir cada solicitud y revisar su estado actual antes de tomar una decisión.
+1. Inicia sesión con tu cuenta de Atención al Cliente
+2. En tu dashboard verás los **permisos pendientes de revisión** y los **pendientes de aprobación final**
+3. Haz clic en un permiso para revisarlo
 
-## Qué revisa Atención al Cliente
+## Revisar un permiso
 
-Antes de actuar sobre un permiso, confirma que la solicitud tenga la información correcta. Revisa:
+Al abrir un permiso pendiente, verás:
 
-- Empresa
-- Área
-- Descripción
-- Fechas y horas
-- Técnicos registrados
-- Adjuntos
+- Empresa proveedora
+- Área de trabajo y descripción
+- Fecha/hora de entrada y salida
+- Técnicos registrados (nombre y NSS)
+- Documentos adjuntos (si los hay)
 
-<Callout kind="info">
+## Acciones disponibles en la revisión inicial
 
-Revisa los datos antes de aprobar o remitir la solicitud. Si agregas observaciones, mantenlas breves y útiles; el sistema permite hasta 1000 caracteres. Si rechazas un permiso, escribe un motivo de al menos 10 caracteres.
+Durante la revisión, **tú decides** la clasificación de riesgo y la actividad:
 
-</Callout>
+=== "Aprobar (Riesgo Bajo)"
 
-## Revisión inicial
+    1. Selecciona una **actividad** del catálogo
+    2. Establece la clasificación de riesgo como **Bajo**
+    3. Agrega **observaciones** opcionales (máx. 1000 caracteres)
+    4. Haz clic en **Aprobar**
+    5. El permiso pasa directamente a estado **Aprobado** y se genera el QR y PDF
 
-Durante la revisión inicial, Atención al Cliente clasifica la solicitud según la actividad y el riesgo. Según el resultado, puedes tomar una de estas acciones:
+=== "Remitir a Departamento (Riesgo Medio/Alto)"
 
-1. **Aprobar** cuando el riesgo es bajo.
-2. **Remitir a un departamento** cuando el riesgo es medio o alto.
-3. **Rechazar** cuando la solicitud no cumple los criterios necesarios.
+    1. Selecciona una **actividad** del catálogo
+    2. Establece la clasificación de riesgo como **Medio** o **Alto**
+    3. Selecciona el **departamento** técnico revisor:
+        - Mantenimiento
+        - Operaciones
+        - Seguridad
+    4. Agrega **observaciones** opcionales
+    5. Haz clic en **Remitir**
+    6. El permiso pasa a estado **En Revisión Departamental**
 
-### Remitir a un departamento
+=== "Rechazar"
 
-Si la solicitud requiere validación adicional, envíala a uno de estos departamentos:
+    1. Escribe el **motivo del rechazo** (obligatorio, mín. 10 caracteres, máx. 1000)
+    2. Opcionalmente selecciona la clasificación de riesgo
+    3. Haz clic en **Rechazar**
+    4. El solicitante será notificado con las observaciones
 
-- Mantenimiento
-- Operaciones
-- Seguridad
+## Aprobación final (post-departamento)
 
-Puedes agregar observaciones opcionales para dejar contexto sobre la solicitud antes de remitirla.
+Después de que el departamento técnico aprueba un permiso remitido, regresa a Atención al Cliente para la **aprobación final**:
 
-### Rechazar una solicitud
+1. Ve a la sección de **Pendientes de Aprobación Final** en tu dashboard
+2. Revisa la resolución del departamento y sus observaciones
+3. Agrega **comentarios finales** opcionales (máx. 1000 caracteres)
+4. Haz clic en **Aprobar** para finalizar el proceso
+5. Se genera el QR y PDF, y se notifica al solicitante
 
-Cuando rechaces un permiso, incluye un motivo obligatorio. El motivo debe tener al menos 10 caracteres.
+## Otras funciones de Atención al Cliente
 
-## Aprobación final
+Además de la revisión de permisos, puedes gestionar:
 
-Después de la revisión departamental, el permiso regresa a Atención al Cliente para la aprobación final. En esta etapa puedes agregar comentarios finales opcionales y aprobar la solicitud para generar el QR y el PDF.
-
-## Funciones relacionadas de Atención al Cliente
-
-Atención al Cliente también concentra la revisión de permisos pendientes en curso y los que ya terminaron la revisión departamental. Esa vista centraliza el seguimiento para que no tengas que cambiar de módulo durante el flujo.
-
-## Siguientes pasos
-
-<Columns cols={2}>
-
-<Card title="Revisión departamental" href="/aprobacion/revision-departamental" icon="shield">
-
-Revisa cómo se valida una solicitud cuando Atención al Cliente la remite a otro departamento.
-
-</Card>
-
-<Card title="Flujo general" href="/aprobacion/flujo-general" icon="arrow-right">
-
-Consulta el recorrido completo de una solicitud desde el envío hasta su aprobación final.
-
-</Card>
-
-</Columns>
+- **Anuncios** — Publicar comunicados para todos los usuarios
+- **Bloqueos de horario** — Restringir fechas/horarios para permisos
+- **Actividades** — Administrar el catálogo de actividades y su clasificación de riesgo

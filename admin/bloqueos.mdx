@@ -1,0 +1,76 @@
+---
+title: Bloqueos de Horario
+description: Guia operativa del sistema de permisos de trabajo.
+---
+
+# Bloqueos de Horario
+
+Los bloqueos de horario permiten **restringir** fechas y horarios en los que no se podrán programar permisos de trabajo.
+
+## ¿Quién puede gestionar bloqueos?
+
+**Atención al Cliente** y **Administrador**.
+
+## ¿Cuándo usar bloqueos?
+
+- **Eventos especiales** en el centro comercial
+- **Días festivos** o temporadas de alta afluencia
+- **Mantenimiento general** de instalaciones
+- **Cualquier fecha** en la que no se permita trabajo de contratistas
+
+## Acceder
+
+1. Navega a **Administración → Bloqueos de Horario**
+2. Verás el listado de bloqueos activos y programados
+
+## Crear bloqueo
+
+1. Haz clic en **Nuevo Bloqueo**
+2. Completa la información:
+
+| Campo | Descripción | Obligatorio |
+|---|---|---|
+| **Título** | Motivo del bloqueo (ej: "Evento navideño") | ✅ |
+| **Descripción** | Detalle adicional | No |
+| **Tipo** | `Día completo` o `Rango de horas` | ✅ |
+| **Fecha de inicio** | Primer día del bloqueo | ✅ |
+| **Fecha de fin** | Último día del bloqueo (dejar vacío si es solo un día) | No |
+| **Hora de inicio** | Solo si el tipo es "Rango de horas" | Condicional |
+| **Hora de fin** | Solo si el tipo es "Rango de horas" | Condicional |
+| **Recurrente** | Si el bloqueo se repite semanalmente | No |
+| **Días de la semana** | Qué días aplica (ej: Lunes a Viernes) — solo si es recurrente | Condicional |
+
+3. Haz clic en **Guardar**
+
+## Tipos de bloqueo
+
+=== "Día completo"
+
+    Bloquea todo el día seleccionado. No se podrán crear permisos para esa fecha.
+
+=== "Rango de horas"
+
+    Bloquea solo un rango de horas específico dentro del día. Permisos fuera de ese horario sí se pueden crear.
+
+## Bloqueos recurrentes
+
+Si activas la opción **Recurrente**, puedes seleccionar los días de la semana en que aplica el bloqueo (ej: todos los sábados y domingos).
+
+## Efecto de los bloqueos
+
+Cuando hay un bloqueo activo:
+
+- El formulario de creación de permisos **verifica automáticamente** las fechas contra los bloqueos activos vía API
+- Si hay conflicto, el botón de envío se **desactiva** y se muestra un aviso
+- Los permisos existentes para esas fechas **no se ven afectados** (deben gestionarse manualmente)
+
+## Activar / Desactivar bloqueo
+
+Puedes activar o desactivar bloqueos sin eliminarlos. Solo los bloqueos **activos** se verifican al crear permisos.
+
+<Callout kind="tip">
+**Planifica con anticipación**
+
+Crea los bloqueos con tiempo suficiente para que los locatarios puedan planificar sus trabajos en fechas alternativas.
+
+</Callout>

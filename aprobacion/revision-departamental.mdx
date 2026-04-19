@@ -1,67 +1,58 @@
 ---
 title: Revisión Departamental
-description: Validaciones del área responsable y criterios para continuar con la aprobación final.
+description: Guia operativa del sistema de permisos de trabajo.
 ---
 
-## Revisión Departamental
+# Revisión Departamental
 
-Los departamentos técnicos de Mantenimiento, Operaciones y Seguridad revisan los permisos que Atención al Cliente les remite cuando el riesgo es medio o alto. Cuando recibes uno de estos permisos, debes validarlo desde los pendientes de tu departamento y decidir si continúa o se rechaza.
+Los departamentos técnicos (**Mantenimiento**, **Operaciones**, **Seguridad**) revisan los permisos que fueron remitidos por Atención al Cliente debido a su nivel de riesgo medio o alto.
 
-## Cuándo me llega un permiso para revisión
+## ¿Cuándo me llega un permiso para revisión?
 
-Atención al Cliente remite el permiso a tu departamento cuando la solicitud requiere revisión técnica y la clasificación de riesgo es media o alta.
+Recibirás permisos para revisión cuando:
 
-<Callout kind="warning">
+- Atención al Cliente remitió el permiso a **tu departamento** específico
+- El nivel de riesgo asignado es **Medio** o **Alto**
 
-Si faltan criterios técnicos o documentación de soporte, la revisión puede bloquearse hasta que el permiso esté completo.
-
-</Callout>
+Recibirás una **notificación** cuando tengas permisos pendientes de revisión.
 
 ## Acceder a permisos pendientes
 
-El dashboard muestra únicamente los permisos pendientes asociados a tu departamento.
-
-1. Abre el dashboard.
-2. Entra a los pendientes departamentales.
-3. Filtra o revisa los permisos de tu propio departamento.
-4. Abre el permiso que vas a evaluar.
+1. Inicia sesión con tu cuenta del departamento
+2. En tu dashboard verás los **permisos pendientes de revisión departamental** (filtrados automáticamente por tu departamento)
+3. También puedes ir a **Mantenimiento → Pendientes**
 
 ## Revisar un permiso
 
-Al abrir un permiso, puedes ver la información necesaria para validar la solicitud:
+Al abrir un permiso, podrás ver:
 
-1. Empresa.
-2. Área y descripción.
-3. Clasificación de riesgo.
-4. Observaciones de Atención al Cliente.
-5. Fecha y hora.
-6. Técnicos asignados.
-7. Documentos adjuntos.
+- **Empresa proveedora** — Quién realizará el trabajo
+- **Área de trabajo y descripción** — Qué y dónde
+- **Clasificación de riesgo** — Asignada por Atención al Cliente
+- **Observaciones de Atención al Cliente** — Notas de la revisión inicial
+- **Fecha y horario** — Cuándo se realizará
+- **Técnicos asignados** — Nombre y NSS del personal
+- **Documentos** — Archivos adjuntos
 
 ## Acciones
 
-Puedes aprobar o rechazar el permiso según la revisión técnica.
+=== "Aprobar"
 
-1. **Aprobar** el permiso si la información es suficiente.
-   - Agrega observaciones finales opcionales.
-   - Las observaciones admiten hasta 1000 caracteres.
-2. **Rechazar** el permiso si falta información o la revisión no procede.
-   - Indica un motivo obligatorio.
-   - El motivo debe tener mínimo 10 caracteres y máximo 1000.
-3. Al aprobar, el permiso cambia a **Pendiente de Aprobación Final** y regresa a Atención al Cliente.
+    1. Si consideras que el permiso cumple con los requisitos técnicos
+    2. Puedes agregar **observaciones finales** opcionales (máx. 1000 caracteres)
+    3. Haz clic en **Aprobar**
+    4. El permiso pasa a estado **Pendiente de Aprobación Final** y regresa a Atención al Cliente
 
-## Después de tu aprobación
+=== "Rechazar"
 
-Tu aprobación no cierra el flujo. El permiso vuelve a Atención al Cliente para la aprobación definitiva.
+    1. Si el permiso no cumple con los requisitos técnicos
+    2. Ingresa el **motivo del rechazo** (obligatorio, mín. 10 caracteres, máx. 1000)
+    3. Haz clic en **Rechazar**
+    4. El solicitante será notificado con las observaciones
 
-<Columns cols={2}>
+<Callout kind="alert">
+**Después de tu aprobación**
 
-<Card title="Aprobación final" href="/aprobacion/aprobacion-final.mdx" icon="check-circle">
-Continúa con el paso definitivo de autorización.
-</Card>
+Tu aprobación no es la etapa final. El permiso regresa a **Atención al Cliente** para que den el visto bueno definitivo antes de generar el QR.
 
-<Card title="Revisión de Atención al Cliente" href="/aprobacion/revision-de-atencion.mdx" icon="users">
-Revisa el paso anterior del flujo y sus criterios.
-</Card>
-
-</Columns>
+</Callout>

@@ -1,85 +1,62 @@
 ---
 title: Seguimiento de Permisos
-description: Aprende cómo revisar el avance de un permiso y detectar qué falta para continuar.
+description: Guia operativa del sistema de permisos de trabajo.
 ---
 
-## Seguimiento de permisos
+# Seguimiento de Permisos
 
-Revisa el estado de un permiso para saber qué falta, quién lo está validando y cuál es la siguiente acción antes de que avance.
+Puedes consultar el estado de tus permisos en cualquier momento.
 
-<Callout kind="info">
+## Ver mis permisos
 
-Esta página te ayuda a identificar por qué un permiso sigue pendiente, qué dato falta completar y cuándo ya está listo para continuar.
+1. Inicia sesión en el sistema
+2. Navega a **Mis Permisos** desde el menú lateral o tu dashboard
+3. Verás un listado con todos tus permisos
 
-</Callout>
+## Información del listado
 
-## Cómo dar seguimiento
+Cada permiso muestra:
 
-<Steps>
-<Step title="Abre el permiso que quieres revisar">
+| Columna | Descripción |
+|---|---|
+| **Folio** | Número único del permiso |
+| **Actividad** | Tipo de trabajo |
+| **Ubicación** | Lugar del trabajo |
+| **Fecha** | Fecha programada |
+| **Estado** | Estado actual (ver [estados del permiso](estados-del-permiso)) |
+| **Acciones** | Botones para ver detalles, descargar PDF, etc. |
 
-Entra al permiso desde tu listado y confirma el folio antes de revisar cualquier cambio.
+## Filtrar permisos
 
-</Step>
+Usa el **buscador** en la parte superior de la tabla para filtrar por:
 
-<Step title="Verifica el estado actual">
+- Número de folio
+- Actividad
+- Ubicación
+- Estado
 
-Revisa si el permiso está en borrador, en revisión, pendiente o aprobado. El estado te dice si el trámite sigue avanzando o si necesita acción de tu lado.
+## Ver detalles de un permiso
 
-</Step>
+Haz clic en el **folio** o en el botón **Ver** para acceder a los detalles completos:
 
-<Step title="Identifica qué falta">
+- Información general del permiso
+- Técnicos asignados con su foto
+- Documentos adjuntos
+- **Historial de estados** — Cronología completa de cambios con fecha, hora y responsable
+- Código QR (si ya fue aprobado)
 
-Busca campos incompletos, observaciones de validación y avisos de revisión. Ahí suele aparecer la causa del retraso.
+## Historial de estados
 
-</Step>
+El historial muestra cada cambio de estado del permiso con:
 
-<Step title="Lee los comentarios y observaciones">
-
-Si el permiso incluye comentarios, revisa el nombre de quien validó o revisó, junto con la nota que dejó. Esa información indica qué corregir antes de reenviar.
-
-</Step>
-
-<Step title="Toma la siguiente acción">
-
-Corrige la información pendiente, adjunta lo que falte o espera la aprobación final si el permiso ya no muestra pendientes.
-
-</Step>
-</Steps>
+- **Fecha y hora** del cambio
+- **Estado anterior** → **Estado nuevo**
+- **Usuario** que realizó la acción
+- **Comentarios** u observaciones (si aplica)
 
 <Callout kind="tip">
+**Mantente informado**
 
-Cuando el permiso llega a estado **Aprobado**, el PDF se genera automáticamente. Ese archivo incluye el folio, los datos de la empresa, el tipo de actividad, el nivel de riesgo, la ubicación del trabajo, la fecha y horario autorizados, y la lista de técnicos con foto y código QR.
-
-</Callout>
-
-## Qué revisar en cada permiso
-
-- **Estado**: confirma si el permiso sigue en revisión o si ya fue aprobado.
-- **Datos pendientes**: identifica campos faltantes o información incompleta.
-- **Validación o revisión**: lee los avisos para saber si falta corregir algo.
-- **Comentarios**: busca observaciones del revisor o aprobador.
-- **Siguiente acción**: determina si debes editar, reenviar o esperar respuesta.
-
-## Problemas comunes
-
-<Callout kind="alert">
-
-Si el permiso no avanza, revisa primero si falta un dato obligatorio o si la validación dejó una observación. En la mayoría de los casos, el bloqueo se resuelve corrigiendo esa parte y volviendo a enviar el permiso.
+Activa las notificaciones para recibir alertas cuando tu permiso cambie de estado. Puedes recibirlas por el sistema, email o WhatsApp.
 
 </Callout>
-
-- **Permiso en pendiente**: falta información obligatoria.
-- **Permiso en revisión**: el equipo responsable todavía no termina de validarlo.
-- **Permiso aprobado pero sin PDF**: espera a que el sistema complete la generación automática del archivo.
-
-## Siguiente paso
-
-<Columns cols={2}>
-  <Card title="Estados del permiso" href="/permisos/estados-del-permiso" icon="shield">
-    Consulta qué significa cada estado y cómo cambia el flujo del permiso.
-  </Card>
-  <Card title="Crear un permiso" href="/permisos/crear-un-permiso" icon="plus">
-    Vuelve al flujo de captura si necesitas iniciar o corregir un permiso.
-  </Card>
-</Columns>

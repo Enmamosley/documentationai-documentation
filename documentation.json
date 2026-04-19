@@ -1,5 +1,5 @@
 {
-  "name": "Starter Kit",
+  "name": "Pabellon M - Permisos de Trabajo",
   "colors": {
     "light": {
       "brand": "#F97316"
@@ -11,27 +11,16 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
+        "tab": "Documentacion",
         "icon": "book",
         "groups": [
           {
-            "group": "Start Here",
-            "icon": "rocket",
+            "group": "Inicio",
             "pages": [
               {
-                "title": "Introduction",
+                "title": "Inicio",
                 "path": "introduction",
                 "icon": "home"
-              },
-              {
-                "title": "Quickstart",
-                "path": "quickstart",
-                "icon": "zap"
-              },
-              {
-                "title": "Components",
-                "path": "components",
-                "icon": "code"
               }
             ]
           },
@@ -43,6 +32,10 @@
                 "path": "primeros-pasos/acceso"
               },
               {
+                "title": "Navegacion General",
+                "path": "primeros-pasos/navegacion-general"
+              },
+              {
                 "title": "Roles y Perfiles",
                 "path": "primeros-pasos/roles"
               }
@@ -52,7 +45,7 @@
             "group": "Permisos de Trabajo",
             "pages": [
               {
-                "title": "¿Qué es un Permiso?",
+                "title": "Que es un Permiso",
                 "path": "permisos/que-es-un-permiso"
               },
               {
@@ -74,22 +67,22 @@
             ]
           },
           {
-            "group": "Proceso de Aprobación",
+            "group": "Proceso de Aprobacion",
             "pages": [
               {
                 "title": "Flujo General",
                 "path": "aprobacion/flujo-general"
               },
               {
-                "title": "Revisión de Atención al Cliente",
+                "title": "Revision de Atencion al Cliente",
                 "path": "aprobacion/revision-de-atencion"
               },
               {
-                "title": "Revisión Departamental",
+                "title": "Revision Departamental",
                 "path": "aprobacion/revision-departamental"
               },
               {
-                "title": "Aprobación Final",
+                "title": "Aprobacion Final",
                 "path": "aprobacion/aprobacion-final"
               }
             ]
@@ -98,7 +91,7 @@
             "group": "Control de Acceso",
             "pages": [
               {
-                "title": "Código QR",
+                "title": "Codigo QR",
                 "path": "acceso/codigo-qr"
               },
               {
@@ -112,61 +105,93 @@
             ]
           },
           {
-            "group": "Components",
-            "icon": "layers",
+            "group": "Dashboards",
             "pages": [
               {
-                "title": "Images",
-                "path": "components/images",
-                "icon": "image"
+                "title": "Dashboard Administrador",
+                "path": "dashboards/admin"
               },
               {
-                "title": "Cards",
-                "path": "components/cards",
-                "icon": "square"
+                "title": "Dashboard Atencion al Cliente",
+                "path": "dashboards/atencion"
               },
               {
-                "title": "Code",
-                "path": "components/code",
-                "icon": "code"
+                "title": "Dashboard CCO",
+                "path": "dashboards/cco"
               },
               {
-                "title": "Callouts",
-                "path": "components/callouts",
-                "icon": "message-square"
+                "title": "Dashboard Guardia",
+                "path": "dashboards/guardia"
               },
               {
-                "title": "Steps",
-                "path": "components/steps",
-                "icon": "list-ordered"
-              },
-              {
-                "title": "Tabs",
-                "path": "components/tabs",
-                "icon": "columns"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "icon": "code",
-        "groups": [
-          {
-            "group": "Overview",
-            "icon": "file-text",
-            "pages": [
-              {
-                "title": "Authentication",
-                "path": "authentication",
-                "icon": "lock"
+                "title": "Dashboard Contacto",
+                "path": "dashboards/contacto"
               }
             ]
           },
           {
-            "group": "Sample Endpoints",
-            "openapi": "openapi.yaml"
+            "group": "Administracion",
+            "pages": [
+              {
+                "title": "Gestion de Empresas",
+                "path": "admin/empresas"
+              },
+              {
+                "title": "Gestion de Usuarios",
+                "path": "admin/usuarios"
+              },
+              {
+                "title": "Actividades y Clasificacion de Riesgo",
+                "path": "admin/actividades"
+              },
+              {
+                "title": "Bloqueos de Horario",
+                "path": "admin/bloqueos"
+              },
+              {
+                "title": "Anuncios del Sistema",
+                "path": "admin/anuncios"
+              },
+              {
+                "title": "Auditoria",
+                "path": "admin/auditoria"
+              }
+            ]
+          },
+          {
+            "group": "Notificaciones",
+            "pages": [
+              {
+                "title": "Notificaciones del Sistema",
+                "path": "notificaciones/sistema"
+              },
+              {
+                "title": "Notificaciones por Email",
+                "path": "notificaciones/email"
+              }
+            ]
+          },
+          {
+            "group": "Components",
+            "icon": "layers",
+            "pages": [
+              {
+                "title": "Optimizacion de Documentacion",
+                "path": "components/optimizacion-documentacion"
+              },
+              {
+                "title": "Callouts",
+                "path": "components/callouts"
+              },
+              {
+                "title": "Steps",
+                "path": "components/steps"
+              },
+              {
+                "title": "Tabs",
+                "path": "components/tabs"
+              }
+            ]
           }
         ]
       },
@@ -175,57 +200,8 @@
         "icon": "help-circle",
         "pages": [
           {
-            "title": "Help Center",
-            "path": "help-center",
-            "icon": "home"
-          },
-          {
-            "group": "FAQs",
-            "icon": "help-circle",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Documentation Source",
-                "path": "help-center/faq/getting-started"
-              }
-            ]
-          },
-          {
-            "group": "Troubleshooting",
-            "icon": "alert-triangle",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Page Missing in Sidebar",
-                "path": "help-center/troubleshooting/install-error"
-              }
-            ]
-          },
-          {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Create Your First Page",
-                "path": "help-center/guides/setup-project"
-              },
-              {
-                "title": "Getting Started",
-                "path": "help-center/guides/getting-started"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Changelog",
-        "icon": "clock",
-        "pages": [
-          {
-            "title": "Changelog",
-            "path": "changelog",
-            "icon": "history"
+            "title": "Preguntas Frecuentes",
+            "path": "help-center/faq/preguntas-frecuentes"
           }
         ]
       }

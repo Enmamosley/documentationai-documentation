@@ -1,150 +1,144 @@
 ---
-title: "Roles y Perfiles"
-description: "Guía de roles y perfiles de Pabellón M: cada permiso se asigna por rol para controlar qué puede ver y hacer cada usuario."
+title: Roles y Perfiles
+description: Guia operativa del sistema de permisos de trabajo.
 ---
 
-## Roles y Perfiles
+# Roles y Perfiles
 
-Cada usuario tiene un rol que determina qué puede ver y hacer dentro de la plataforma. Los roles definen el alcance de acceso, las acciones disponibles y, en algunos casos, el tipo de permisos que puede revisar o aprobar cada perfil.
-
-<Callout kind="info">
-
-**Cómo usar esta guía:** revisa el rol asignado a cada persona para entender qué acciones están disponibles, qué información puede consultar y qué tareas puede ejecutar en Pabellón M.
-
-</Callout>
+El sistema asigna un **rol** a cada usuario que determina qué puede ver y hacer dentro de la plataforma.
 
 ## Roles disponibles
 
-<Columns cols={2}>
-  <Card title="Contacto" href="#contacto" icon="users">
-    Crea nuevos permisos, ve el seguimiento solo de su empresa y descarga PDF.
-  </Card>
-  <Card title="Atención al Cliente" href="#atencion-al-cliente" icon="help-circle">
-    Revisa permisos, clasifica riesgo y gestiona aprobaciones y rechazos.
-  </Card>
-  <Card title="Mantenimiento" href="#mantenimiento" icon="settings">
-    Crea permisos para actividades propias y revisa permisos técnicos asignados.
-  </Card>
-  <Card title="Operaciones" href="#operaciones" icon="bar-chart">
-    Realiza revisión técnica, aprueba o rechaza permisos asignados.
-  </Card>
-  <Card title="Seguridad" href="#seguridad" icon="shield">
-    Realiza revisión técnica, aprueba o rechaza permisos asignados.
-  </Card>
-  <Card title="CCO" href="#cco-centro-de-control-operacional" icon="monitor">
-    Ve el dashboard en tiempo real y monitorea permisos.
-  </Card>
-  <Card title="Guardia" href="#guardia" icon="lock">
-    Escanea QR, registra entrada y salida y busca permisos por folio.
-  </Card>
-  <Card title="Administrador" href="#administrador" icon="settings">
-    Tiene acceso a todas las funciones disponibles y administra empresas y usuarios.
-  </Card>
-</Columns>
+### :material-store: Contacto (Locatario)
 
-## Contacto
+El contacto es la persona designada por una empresa/local para gestionar los permisos de trabajo.
 
-El rol **Contacto** corresponde al locatario y se enfoca en la gestión de sus propios permisos.
+**Puede:**
 
-### Acciones principales
+- Crear nuevos permisos de trabajo para su empresa
+- Ver el estado y seguimiento de sus permisos (solo los de su empresa)
+- Descargar el PDF del permiso aprobado
+- Cancelar sus propios permisos en estado **Aprobado** (no en uso)
+- Ver anuncios publicados en el sistema
+- Editar su perfil y contraseña
 
-- Crear nuevos permisos.
-- Ver seguimiento solo de su empresa.
-- Descargar PDF.
-- Cancelar sus propios permisos en estado aprobado.
-- Ver anuncios.
-- Editar perfil y contraseña.
+---
 
-## Atención al Cliente
+### :material-headset: Atención al Cliente
 
-El rol **Atención al Cliente** concentra la revisión operativa de permisos y la gestión del flujo de aprobación.
+Personal de atención al cliente encargado de la revisión y aprobación de permisos.
 
-### Acciones principales
+**Puede:**
 
-- Revisar permisos.
-- Clasificar riesgo.
-- Asignar actividad.
-- Aprobar permisos de bajo riesgo.
-- Remitir permisos de riesgo medio o alto a técnico.
-- Realizar la aprobación final.
-- Rechazar permisos.
-- Gestionar anuncios, bloqueos y catálogo de actividades.
+- Ver todos los permisos pendientes de revisión
+- **Clasificar el riesgo** del permiso (bajo, medio, alto)
+- **Asignar la actividad** del catálogo al permiso
+- Aprobar directamente permisos de riesgo bajo
+- Remitir permisos de riesgo medio/alto al departamento técnico (Mantenimiento, Operaciones o Seguridad)
+- Dar la **aprobación final** a permisos que pasaron revisión departamental
+- Rechazar permisos con observaciones
+- Gestionar **anuncios** del sistema (crear, editar, activar/desactivar)
+- Gestionar **bloqueos de horario** (crear, editar, activar/desactivar)
+- Gestionar **catálogo de actividades** (crear, editar, activar/desactivar)
 
-## Mantenimiento
+---
 
-El rol **Mantenimiento** cubre permisos relacionados con actividades propias y su revisión técnica.
+### :material-wrench: Mantenimiento
 
-### Acciones principales
+Departamento técnico de mantenimiento. Tiene un rol dual.
 
-- Crear permisos para actividades propias, con autoaprobación.
-- Revisar técnicamente los permisos.
-- Aprobar o rechazar permisos.
-- Ver permisos asignados.
+**Puede:**
 
-## Operaciones
+- **Crear permisos de trabajo** para actividades propias (se aprueban automáticamente)
+- Realizar **revisión técnica** de permisos remitidos a su departamento
+- Aprobar o rechazar permisos desde su perspectiva técnica
+- Ver permisos asignados a su departamento
 
-El rol **Operaciones** participa en la revisión técnica y en la resolución de permisos asignados.
+---
 
-### Acciones principales
+### :material-cog: Operaciones
 
-- Realizar revisión técnica.
-- Aprobar o rechazar permisos.
-- Ver permisos asignados.
+Departamento técnico de operaciones.
 
-## Seguridad
+**Puede:**
 
-El rol **Seguridad** comparte el alcance técnico y de validación de permisos asignados.
+- Realizar **revisión técnica** de permisos remitidos a su departamento
+- Aprobar o rechazar desde su perspectiva técnica
+- Ver permisos asignados a su departamento
 
-### Acciones principales
+---
 
-- Realizar revisión técnica.
-- Aprobar o rechazar permisos.
-- Ver permisos asignados.
+### :material-shield: Seguridad
 
-## CCO
+Departamento técnico de seguridad.
 
-El rol **CCO** corresponde al Centro de Control Operacional y se orienta al monitoreo en tiempo real.
+**Puede:**
 
-### Acciones principales
+- Realizar **revisión técnica** de permisos remitidos a su departamento
+- Aprobar o rechazar desde su perspectiva técnica
+- Ver permisos asignados a su departamento
 
-- Ver el dashboard en tiempo real.
-- Monitorear permisos.
-- Cancelar permisos aprobados o en uso.
-- Consultar información.
-- Ver todos los permisos.
+---
 
-## Guardia
+### :material-monitor-dashboard: CCO (Centro de Control Operacional)
 
-El rol **Guardia** está orientado a la validación en sitio y al registro de movimientos.
+Monitoreo en tiempo real de las operaciones.
 
-### Acciones principales
+**Puede:**
 
-- Escanear QR.
-- Registrar entrada y salida.
-- Buscar permisos por folio.
-- Ver detalles.
+- Ver dashboard en tiempo real con permisos activos (en uso)
+- Monitorear permisos aprobados del día y próximos
+- Ver historial reciente y escaneos del día
+- **Cancelar permisos** aprobados o en uso (como `cancelado_cco`)
+- Consultar información de permisos
+- Ver todos los permisos
 
-## Administrador
+---
 
-El rol **Administrador** concentra todas las funciones anteriores y agrega tareas de administración de la plataforma.
+### :material-account-key: Guardia
 
-### Acciones principales
+Personal de seguridad en puntos de acceso.
 
-- Acceder a todas las acciones disponibles para los demás roles.
-- Gestionar empresas y usuarios.
-- Revisar logs de auditoría.
-- Administrar la papelera.
-- Eliminar permisos permanentemente.
-- Cancelar cualquier permiso.
+**Puede:**
+
+- Escanear códigos QR de permisos con la cámara
+- Registrar **entrada** de contratistas (cambia estado a "En Uso")
+- Registrar **salida** de contratistas (cambia estado a "Completado")
+- Buscar permisos por **número de folio** manualmente
+- Ver detalles del permiso escaneado o buscado
+
+---
+
+### :material-shield-crown: Administrador
+
+Control total del sistema.
+
+**Puede:**
+
+- Todo lo que pueden hacer los demás roles
+- Gestionar **empresas** (crear, editar, activar/desactivar)
+- Gestionar **usuarios** (crear, editar, asignar roles)
+- Ver **logs de auditoría** y exportar a CSV
+- **Papelera** — restaurar permisos eliminados (soft delete)
+- **Eliminar** permisos permanentemente
+- Cancelar cualquier permiso aprobado o en uso
+
+---
 
 ## Cambiar tu perfil
 
-El menú de tu nombre te lleva a **Mi Perfil**, donde puedes actualizar tu nombre y tu teléfono.
+Todos los usuarios pueden actualizar su información personal:
 
-Para cambiar tu contraseña, usa la sección separada de contraseña. El rol lo asigna un administrador, y no puedes cambiar tu rol ni tu correo desde tu perfil.
+1. Haz clic en tu **nombre** en la esquina superior derecha
+2. Selecciona **Mi Perfil**
+3. Puedes actualizar:
+    - Nombre
+    - Teléfono
+4. Para cambiar tu **contraseña**, usa la sección aparte
 
 <Callout kind="info">
+**Tu rol lo asigna el administrador**
 
-Si no ves el rol, la acción o la opción que necesitas, revisa el [Help Center](/help-center) o la sección de [Preguntas frecuentes](/faq).
+No puedes cambiar tu propio rol ni tu correo electrónico. Si necesitas cambios, contacta al administrador.
 
 </Callout>

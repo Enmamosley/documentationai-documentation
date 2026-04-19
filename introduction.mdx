@@ -1,80 +1,60 @@
 ---
-title: Introducción
-description: 'Resumen del sistema de permisos de Pabellón M, con acceso, credenciales y roles o perfiles para proveedores y contratistas.'
+title: Inicio
+description: Punto de entrada al Sistema de Permisos de Trabajo de Pabellon M.
 ---
-## Pabellón M permissions system
 
-Pabellón M usa este sistema para administrar permisos de trabajo de proveedores y contratistas.
+# Sistema de Permisos de Trabajo
 
-Desde aquí puedes orientarte en el acceso, revisar qué credenciales necesitas y entender cómo cambian los permisos según el rol o perfil asignado.
+Gestiona permisos para proveedores y contratistas en Pabellon M de forma segura, trazable y ordenada.
 
 <Callout kind="info">
-  En el Starter Kit vas a aprender cómo acceder al sistema, cómo funcionan las credenciales y cómo usar roles o perfiles para continuar con permisos y soporte.
+Esta documentacion esta organizada por flujo real de operacion: acceso, creacion de permisos, aprobacion y control de entrada/salida.
 </Callout>
 
-## Qué es Pabellón M
-
-Pabellón M centraliza la gestión de permisos de trabajo para proveedores y contratistas.
-
-Usa esta documentación como punto de entrada para entender el flujo general del sistema y ubicar rápidamente la información que necesitas antes de avanzar con permisos, acceso o ayuda.
-
-## Acceso y credenciales
-
-El acceso al sistema parte de tus credenciales y de la forma en que tu organización habilita la entrada.
-
-Si necesitas iniciar por este tema, revisa la página de [Acceso al Sistema](/primeros-pasos/acceso) para ver el resumen de acceso y los pasos iniciales.
-
-## Roles y perfiles
-
-El acceso cambia según el rol o perfil que tengas dentro del sistema.
-
-Consulta [Roles y Perfiles](/primeros-pasos/roles) para entender qué cambia entre perfiles y cómo afecta tu recorrido dentro de Pabellón M.
-
-## Ruta sugerida
+## Arranca en 3 pasos
 
 <Steps>
-  <Step title="Entrar al sistema" icon="play-circle" title-type="p">
-    Abre el sistema y ubica el punto de acceso que usa tu organización.
-  </Step>
-
-  <Step title="Revisar credenciales" icon="lock" title-type="p">
-    Confirma qué credenciales necesitas para ingresar y qué información debe validar tu equipo.
-  </Step>
-
-  <Step title="Entender tu rol" icon="users" title-type="p">
-    Identifica tu rol o perfil para saber qué opciones verás dentro del sistema.
-  </Step>
-
-  <Step title="Continuar con permisos o soporte" icon="help-circle" title-type="p">
-    Sigue con la documentación de permisos o entra al centro de ayuda cuando necesites resolver una duda.
-  </Step>
+    <Step title="Ingresa al sistema" icon="log-in">
+        Confirma que puedes iniciar sesion y que tu rol tiene los permisos correctos.
+    </Step>
+    <Step title="Crea o revisa permisos" icon="file-check">
+        Dependiendo de tu rol, podras crear solicitudes o aprobar/rechazar etapas.
+    </Step>
+    <Step title="Controla ejecucion en campo" icon="qr-code">
+        Usa QR y scanner para registrar entrada y salida de tecnicos.
+    </Step>
 </Steps>
 
-## Recursos y soporte
+## Guias clave
 
-Si necesitas resolver una duda rápida, empieza por el [Help Center](/help-center).
-
-Para preguntas frecuentes y orientación adicional, revisa también las páginas de ayuda disponibles en el sitio antes de avanzar con tu flujo de permisos.
-
-<Columns cols="3">
-  <Card title="Introducción" href="/introduction" icon="book-open" horizontal="false">
-    Regresa a esta página de entrada para ubicarte en el sistema.
-  </Card>
-
-  <Card title="Quickstart" href="/quickstart" icon="zap" horizontal="false">
-    Sigue el recorrido inicial para ponerte en marcha.
-  </Card>
-
-  <Card title="Acceso al Sistema" href="/primeros-pasos/acceso" icon="lock" horizontal="false">
-    Revisa el acceso y las credenciales necesarias.
-  </Card>
-
-  <Card title="Roles y Perfiles" href="/primeros-pasos/roles" icon="users" horizontal="false">
-    Consulta cómo cambia el acceso según tu perfil.
-  </Card>
-
-  <Card title="Help Center" href="/help-center" icon="help-circle" horizontal="false">
-    Encuentra ayuda, preguntas frecuentes y soporte.
-  </Card>
+<Columns cols={2}>
+    <Card title="Acceso al Sistema" href="/primeros-pasos/acceso" icon="lock">
+        Inicio de sesion, credenciales y cierre seguro.
+    </Card>
+    <Card title="Crear un Permiso" href="/permisos/crear-un-permiso" icon="file-plus">
+        Flujo de captura y envio de una solicitud.
+    </Card>
+    <Card title="Flujo de Aprobacion" href="/aprobacion/flujo-general" icon="git-branch">
+        Etapas de revision y aprobacion final.
+    </Card>
+    <Card title="Control de Acceso" href="/acceso/codigo-qr" icon="shield">
+        Uso de QR y scanner en sitio.
+    </Card>
 </Columns>
 
+## Roles del sistema
+
+| Rol | Funcion principal | Accion clave |
+|---|---|---|
+| Contacto | Crea y da seguimiento a permisos | Solicitar permisos |
+| Atencion al Cliente | Revisa, clasifica y aprueba | Asignar riesgo y actividad |
+| Mantenimiento | Crea y revisa tecnicamente | Auto-aprobacion segun regla |
+| Operaciones | Revision tecnica departamental | Aprobar o rechazar |
+| Seguridad | Revision tecnica departamental | Aprobar o rechazar |
+| CCO | Monitoreo en tiempo real | Cancelar permisos activos |
+| Guardia | Control de acceso fisico | Escanear QR |
+| Administrador | Gestion integral del sistema | Configuracion y control |
+
+<Callout kind="tip">
+Si estas implementando nuevas paginas, usa la guia de estandar en <a href="/components/optimizacion-documentacion">Components/Optimizacion</a> para mantener formato y claridad consistentes.
+</Callout>

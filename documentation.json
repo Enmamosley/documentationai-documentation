@@ -49,6 +49,19 @@
             ]
           },
           {
+            "group": "Permisos de Trabajo",
+            "pages": [
+              {
+                "title": "¿Qué es un Permiso?",
+                "path": "permisos/que-es-un-permiso"
+              },
+              {
+                "title": "Crear un Permiso",
+                "path": "permisos/crear-un-permiso"
+              }
+            ]
+          },
+          {
             "group": "Components",
             "icon": "layers",
             "pages": [

@@ -90,15 +90,15 @@
             "pages": [
               {
                 "title": "Guardia",
-                "path": "acceso/guardia"
+                "path": "operaciones/guardia"
               },
               {
                 "title": "Scanner de Guardia",
-                "path": "acceso/scanner-de-guardia"
+                "path": "operaciones/scanner-de-guardia"
               },
               {
                 "title": "Registro de Entrada y Salida",
-                "path": "acceso/registro-entrada-y-salida"
+                "path": "operaciones/registro-entrada-y-salida"
               },
               {
                 "title": "Dashboard Guardia",

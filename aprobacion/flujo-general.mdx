@@ -5,28 +5,28 @@ description: Guia operativa del sistema de permisos de trabajo.
 
 # Flujo General de Aprobación
 
-Los permisos de trabajo pasan por un proceso de aprobación que varía según la **clasificación de riesgo** que asigne Atención al Cliente durante la revisión.
+La version actual del sistema combina un flujo base para locatarios con workflows configurables segun el rol que crea el permiso.
 
 ## Diagrama general
 
 ```mermaid
 flowchart TD
-    A[📋 Contacto crea permiso] --> B{Revisión AtC}
-    B --> |Riesgo Bajo| C[✅ AtC aprueba directamente]
-    B --> |Riesgo Medio/Alto| D[📤 Remitido a Departamento]
-    D --> E{Revisión Departamental}
-    E --> |Aprobado| F[📋 Aprobación Final AtC]
-    E --> |Rechazado| G[❌ Rechazado]
-    F --> H[✅ Aprobado]
-    C --> H
-    H --> I[🔲 QR + PDF generados]
+    A[Contacto crea permiso] --> B{Revision AtC}
+    B --> |Riesgo bajo| C[Aprobado]
+    B --> |Riesgo medio o alto| D[Revision departamental]
+    D --> |Aprobado| E[Aprobacion final AtC]
+    D --> |Rechazado| F[Rechazado]
+    E --> G[Aprobado]
+    C --> G
+    G --> H[QR y PDF generados]
 
-    M[🔧 Mantenimiento crea permiso] --> H
+    I[Pabellon M o Sistemas Especiales crea permiso] --> J[Revision departamental]
+    J --> |Aprobado| K[Aprobado]
+    J --> |Rechazado| F
+    K --> H
 
-    style H fill:#16a34a,color:#fff
-    style G fill:#dc2626,color:#fff
-    style M fill:#7c3aed,color:#fff
-    style I fill:#0891b2,color:#fff
+    L[Mantenimiento crea permiso] --> M[Auto-aprobado]
+    M --> H
 ```
 
 ---
@@ -62,28 +62,44 @@ Contacto crea permiso → AtC revisa y clasifica como MEDIO/ALTO → Remite a de
 
 ---
 
+## Flujo para permisos de **Pabellon M** y **Sistemas Especiales**
+
+```
+Solicitud interna → Revision departamental → ✅ Aprobado → QR y PDF
+```
+
+1. El usuario crea el permiso desde su dashboard
+2. Selecciona el **departamento asignado** al que debe enviarse
+3. El sistema lo coloca en **revision departamental** sin pasar por Atencion al Cliente
+4. Si el departamento aprueba, el permiso pasa a **Aprobado**
+5. El sistema genera QR y PDF automaticamente
+
+---
+
 ## Flujo para permisos de **Mantenimiento** — Aprobación automática
 
 ```
 Mantenimiento crea permiso → ✅ Aprobado automáticamente
 ```
 
-Los permisos creados por usuarios con rol **Mantenimiento** se aprueban de inmediato sin revisión. El QR y PDF se generan al momento de crear el permiso.
+Los permisos creados por usuarios con rol **Mantenimiento** se aprueban de inmediato sin revision manual. El QR y PDF se generan al momento de crear el permiso.
 
 ---
 
 ## ¿Quién decide el departamento revisor?
 
-| Decisión | Responsable |
+| Decision | Responsable |
 |---|---|
-| Clasificación de riesgo | **Atención al Cliente** (manual) |
-| Actividad del catálogo | **Atención al Cliente** (selecciona durante revisión) |
-| Departamento técnico | **Atención al Cliente** (selecciona al remitir: Mantenimiento, Operaciones o Seguridad) |
+| Clasificacion de riesgo en flujo de contacto | **Atencion al Cliente** |
+| Actividad del catalogo en flujo de contacto | **Atencion al Cliente** |
+| Departamento tecnico en flujo de contacto | **Atencion al Cliente** |
+| Departamento tecnico en flujo Pabellon M / Sistemas Especiales | **Usuario creador** |
+| Estructura del flujo por rol creador | **Administrador** mediante workflows |
 
 <Callout kind="info">
-**Decisión manual**
+**Workflow configurable**
 
-A diferencia de otros sistemas, la clasificación de riesgo y la asignación de departamento **no son automáticas**. Atención al Cliente evalúa cada permiso individualmente y toma estas decisiones durante la revisión.
+El flujo ya no depende solo de reglas fijas. El sistema puede asignar una plantilla de workflow segun el rol creador del permiso.
 
 </Callout>
 ## Tiempos del proceso

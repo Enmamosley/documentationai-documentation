@@ -1,0 +1,59 @@
+---
+title: Gestion de Workflows
+description: Configuracion de flujos de aprobacion por rol creador.
+---
+
+# Gestion de Workflows
+
+Los **Administradores** pueden configurar plantillas de workflow para definir como avanza un permiso segun el rol que lo crea.
+
+## Que resuelve esta seccion
+
+Un workflow permite controlar:
+
+- El **estado inicial** del permiso
+- El **orden de pasos** del flujo
+- El **rol responsable** de cada paso
+- Si un paso puede **clasificar riesgo**
+- Si un paso puede **asignar departamento**
+- En que momento se generan **QR y PDF**
+- Que roles creadores usan cada plantilla
+
+## Elementos principales
+
+| Elemento | Funcion |
+|---|---|
+| **Plantilla** | Define un flujo completo reutilizable |
+| **Paso** | Describe un estado, responsable y comportamiento del flujo |
+| **Asignacion** | Vincula la plantilla a uno o mas roles creadores |
+
+## Ejemplos de flujos actuales
+
+| Rol creador | Comportamiento esperado |
+|---|---|
+| **Contacto** | Flujo clasico con Atencion al Cliente y posible revision departamental |
+| **Mantenimiento** | Auto-aprobacion con generacion inmediata de QR y PDF |
+| **Pabellon M** | Revision departamental directa |
+| **Sistemas Especiales** | Revision departamental directa |
+
+## Operaciones disponibles
+
+- Crear una nueva plantilla
+- Editar nombre, slug, descripcion y estado activo
+- Agregar, editar y eliminar pasos
+- Reordenar pasos del flujo
+- Asignar o remover roles creadores
+- Activar o desactivar una plantilla sin borrarla
+
+<Callout kind="warning">
+**Impacto operativo**
+
+Cambiar un workflow puede modificar el estado inicial y el recorrido de nuevas solicitudes. Antes de ajustar una plantilla activa, valida el cambio con las areas operativas involucradas.
+
+</Callout>
+
+## Recomendaciones
+
+- Usa nombres claros para distinguir flujos de contacto, auto-aprobacion y revision departamental
+- Mantén pocos pasos y responsabilidades bien definidas
+- Verifica que el rol responsable de cada paso exista realmente en la operación

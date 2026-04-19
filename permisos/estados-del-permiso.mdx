@@ -19,7 +19,7 @@ Cada permiso de trabajo pasa por diferentes estados durante su ciclo de vida.
 | <span class="status status--aprobado">:material-check-all: Completado</span> | Salida registrada, trabajo terminado |
 | <span class="status status--rechazado">:material-close-circle: Rechazado</span> | Rechazado con observaciones |
 | <span class="status status--vencido">:material-timer-off: Vencido</span> | No se presentó a tiempo |
-| <span class="status status--cancelado">:material-cancel: Cancelado</span> | Cancelado por el solicitante |
+| <span class="status status--cancelado">:material-cancel: Cancelado</span> | Cancelado por el solicitante, administrador o por automatizacion |
 | <span class="status status--rechazado">:material-shield-off: Cancelado por CCO</span> | Cancelado por CCO/Admin |
 
 ## Diagrama del flujo de estados
@@ -35,10 +35,10 @@ graph TD
     E -->|AtC rechaza| F
     G -->|Guardia escanea QR entrada| H[En Uso]
     H -->|Guardia escanea QR salida| I[Completado]
-    G -->|No se presenta en 30 min| J[Vencido]
-    A -->|Solicitante cancela| K[Cancelado]
-    C -->|Solicitante cancela| K
-    E -->|Solicitante cancela| K
+    G -->|No se presenta en el tiempo permitido| J[Vencido]
+    A -->|Cancelacion manual o automatica| K[Cancelado]
+    C -->|Cancelacion manual o automatica| K
+    E -->|Cancelacion manual o automatica| K
     G -->|CCO o Admin cancela| L[Cancelado por CCO]
     H -->|CCO o Admin cancela| L
 
@@ -70,7 +70,7 @@ El permiso fue enviado y está esperando que **Atención al Cliente** lo revise,
 
 ### :material-magnify: En Revisión Departamental
 
-Atención al Cliente clasificó el permiso como riesgo **medio** o **alto** y lo remitió al departamento técnico correspondiente (Mantenimiento, Operaciones o Seguridad).
+Atencion al Cliente clasifico el permiso como riesgo **medio** o **alto** y lo remitio al departamento tecnico correspondiente. Este estado tambien se usa para flujos directos como **Pabellon M** o **Sistemas Especiales**.
 
 - **¿Quién lo ve?** El departamento asignado y Administrador
 - **¿Qué puede hacer el solicitante?** Esperar o cancelar el permiso
@@ -88,10 +88,10 @@ El departamento técnico aprobó el permiso desde su perspectiva. Ahora Atenció
 
 ### :material-check-decagram: Aprobado
 
-El permiso fue **aprobado**. Se generó automáticamente el **código QR** y el **PDF** del permiso.
+El permiso fue **aprobado**. Se genero automaticamente el **codigo QR** y el **PDF** del permiso.
 
 - **¿Quién lo ve?** Todos los involucrados
-- **¿Qué recibe el solicitante?** Notificación por sistema, email y/o WhatsApp con enlace para descargar el PDF
+- **¿Qué recibe el solicitante?** Notificacion por sistema, email y/o WhatsApp con enlace para descargar el PDF
 - **Siguiente paso:** Presentarse con el QR el día del trabajo
 
 <Callout kind="tip">
@@ -130,9 +130,10 @@ El permiso fue rechazado durante alguna etapa de revisión (por Atención al Cli
 
 ### :material-timer-off: Vencido
 
-El permiso fue aprobado pero el personal **no se presentó** dentro del tiempo establecido.
+El permiso fue aprobado pero el personal **no se presento** dentro del tiempo establecido, o la fecha de salida ya expiro sin uso valido.
 
-- **Tolerancia:** 30 minutos después de la hora de entrada programada
+- **Operacion:** El sistema puede marcarlo automaticamente como vencido por no uso
+- **Excepcion operativa:** Si la configuracion de entrada tardia lo permite y la fecha de salida aun no pasa, el guardia puede reactivarlo y registrar el acceso
 - **Proceso automático:** El sistema vence permisos no usados automáticamente
 - **También vence si:** La fecha/hora de salida ya pasó
 - **¿Qué puede hacer el solicitante?** Crear un nuevo permiso
@@ -141,16 +142,16 @@ El permiso fue aprobado pero el personal **no se presentó** dentro del tiempo e
 
 ### :material-cancel: Cancelado
 
-El permiso fue cancelado por el **solicitante** (contacto) antes de ser usado.
+El permiso fue cancelado antes de entrar en uso.
 
 - **El solicitante puede cancelar en:** Cualquier estado previo a "En Uso"
 - **Requiere:** Motivo de cancelación (mínimo 10 caracteres)
-- **Solo sus propios permisos** en estado "Aprobado"
+- **Tambien aplica a cancelacion automatica:** Si la hora de entrada expira y el permiso sigue pendiente de aprobacion, el sistema lo cancela automaticamente
 
 <Callout kind="info">
-**Cancelación automática**
+**Cancelacion automatica**
 
-Los permisos que permanecen en estado "Pendiente de Revisión" y cuya hora de entrada ya pasó (con 15 minutos de tolerancia) se cancelan automáticamente.
+Los permisos que permanecen en etapas pendientes de aprobacion y cuya hora de entrada ya expiro dentro de la tolerancia configurada se cancelan automaticamente.
 
 </Callout>
 ---

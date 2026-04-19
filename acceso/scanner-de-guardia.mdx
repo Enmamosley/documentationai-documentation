@@ -52,7 +52,7 @@ El sistema verifica automáticamente:
 - Que **no esté vencido** (más de 30 minutos después de la hora de entrada, o que la fecha de salida no haya pasado)
 - Que **no haya una entrada previa** sin salida registrada (previene doble entrada)
 
-Si el permiso está vencido al momento del escaneo, el sistema lo actualiza automáticamente a estado **Vencido** y no permite el registro.
+Si el permiso esta vencido al momento del escaneo, normalmente no permite el registro. Sin embargo, cuando la operacion permite **entrada tardia** y la fecha de salida aun esta vigente, el guardia puede reactivar el permiso y registrar el acceso.
 
 </Callout>
 ## Registrar salida
@@ -88,3 +88,11 @@ Si el QR no funciona, puedes buscar el permiso manualmente:
 | :material-check-circle:{ style="color: green" } **Válido** | El permiso está aprobado y puede registrar entrada |
 | :material-alert:{ style="color: orange" } **Vencido** | Pasaron más de 30 min desde la hora de entrada o la fecha de salida ya pasó |
 | :material-close-circle:{ style="color: red" } **Inválido** | El permiso no existe, está cancelado, rechazado, ya fue completado, o ya tiene entrada sin salida |
+
+## Entrada tardia
+
+Si un permiso ya fue marcado como **Vencido** por retraso, el guardia todavia puede encontrarlo al escanear o buscar por folio.
+
+- Si la fecha de salida ya paso, no se puede registrar acceso
+- Si la fecha de salida sigue vigente y la operacion lo permite, el guardia puede reactivar el permiso
+- El historial deja registro de que fue una **entrada tardia**

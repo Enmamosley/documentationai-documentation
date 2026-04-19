@@ -42,6 +42,10 @@
               {
                 "title": "Dashboard Contacto",
                 "path": "dashboards/contacto"
+              },
+              {
+                "title": "Dashboard Pabellon M",
+                "path": "dashboards/pabellonm"
               }
             ]
           },
@@ -169,6 +173,10 @@
               {
                 "title": "Gestion de Usuarios",
                 "path": "administracion/usuarios"
+              },
+              {
+                "title": "Gestion de Workflows",
+                 "path": "administracion/workflows"
               },
               {
                 "title": "Actividades y Clasificacion de Riesgo",

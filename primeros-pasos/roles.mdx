@@ -18,9 +18,23 @@ El contacto es la persona designada por una empresa/local para gestionar los per
 - Crear nuevos permisos de trabajo para su empresa
 - Ver el estado y seguimiento de sus permisos (solo los de su empresa)
 - Descargar el PDF del permiso aprobado
-- Cancelar sus propios permisos en estado **Aprobado** (no en uso)
+- Cancelar sus propios permisos en estados previos a **En Uso**
 - Ver anuncios publicados en el sistema
 - Editar su perfil y contraseña
+
+---
+
+### :material-office-building: Pabellon M
+
+Rol interno para solicitudes operativas del centro comercial.
+
+**Puede:**
+
+- Crear permisos de trabajo desde un dashboard propio
+- Enviar el permiso directamente al departamento tecnico asignado
+- Consultar historial, PDF y QR de sus permisos aprobados
+- Editar sus permisos mientras sigan en etapas previas al uso
+- Cancelar permisos antes de que entren en uso
 
 ---
 
@@ -53,6 +67,19 @@ Departamento técnico de mantenimiento. Tiene un rol dual.
 - Realizar **revisión técnica** de permisos remitidos a su departamento
 - Aprobar o rechazar permisos desde su perspectiva técnica
 - Ver permisos asignados a su departamento
+
+---
+
+### :material-laptop: Sistemas Especiales
+
+Rol tecnico para trabajos de infraestructura o sistemas especiales.
+
+**Puede:**
+
+- Crear permisos con flujo departamental directo
+- Revisar permisos asignados a su area
+- Aprobar o rechazar desde su perspectiva tecnica
+- Usar su propio catalogo de actividades de mantenimiento/autocompletado
 
 ---
 
@@ -118,6 +145,7 @@ Control total del sistema.
 - Todo lo que pueden hacer los demás roles
 - Gestionar **empresas** (crear, editar, activar/desactivar)
 - Gestionar **usuarios** (crear, editar, asignar roles)
+- Gestionar **workflows** por rol creador y sus pasos
 - Ver **logs de auditoría** y exportar a CSV
 - **Papelera** — restaurar permisos eliminados (soft delete)
 - **Eliminar** permisos permanentemente

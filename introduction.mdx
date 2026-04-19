@@ -8,53 +8,39 @@ description: Punto de entrada al Sistema de Permisos de Trabajo de Pabellon M.
 Gestiona permisos para proveedores y contratistas en Pabellon M de forma segura, trazable y ordenada.
 
 <Callout kind="info">
-Esta documentacion esta organizada por flujo real de operacion: acceso, creacion de permisos, aprobacion y control de entrada/salida.
+Esta documentacion esta organizada por rol y responsabilidad. Cada seccion contiene la informacion relevante para tu función especifica.
 </Callout>
 
-## Arranca en 3 pasos
-
-<Steps>
-    <Step title="Ingresa al sistema" icon="log-in">
-        Confirma que puedes iniciar sesion y que tu rol tiene los permisos correctos.
-    </Step>
-    <Step title="Crea o revisa permisos" icon="file-check">
-        Dependiendo de tu rol, podras crear solicitudes o aprobar/rechazar etapas.
-    </Step>
-    <Step title="Controla ejecucion en campo" icon="qr-code">
-        Usa QR y scanner para registrar entrada y salida de tecnicos.
-    </Step>
-</Steps>
-
-## Guias clave
+## Encuentra tu seccion
 
 <Columns cols={2}>
-    <Card title="Acceso al Sistema" href="/primeros-pasos/acceso" icon="lock">
-        Inicio de sesion, credenciales y cierre seguro.
+    <Card title="📖 Documentacion" href="#" icon="book">
+        **Para usuario normal (Contacto).** Crea permisos, consulta estados, descarga PDFs y registra acceso.
     </Card>
-    <Card title="Crear un Permiso" href="/permisos/crear-un-permiso" icon="file-plus">
-        Flujo de captura y envio de una solicitud.
+    <Card title="✅ Revisores y Aprobadores" href="#" icon="check-circle">
+        **Para Atención al Cliente y departamentos técnicos.** Revisa permisos, clasifica riesgo, asigna actividades y aprueba.
     </Card>
-    <Card title="Flujo de Aprobacion" href="/aprobacion/flujo-general" icon="git-branch">
-        Etapas de revision y aprobacion final.
+    <Card title="🎯 Operaciones" href="#" icon="activity">
+        **Para CCO y Guardia.** Monitorea permisos en tiempo real, controla acceso físico y registra entrada/salida.
     </Card>
-    <Card title="Control de Acceso" href="/acceso/codigo-qr" icon="shield">
-        Uso de QR y scanner en sitio.
+    <Card title="⚙️ Administración" href="#" icon="settings">
+        **Para Administradores.** Gestiona empresas, usuarios, actividades, bloqueos y auditoria del sistema.
     </Card>
 </Columns>
 
-## Roles del sistema
+## Entiendo los roles
 
-| Rol | Funcion principal | Accion clave |
-|---|---|---|
-| Contacto | Crea y da seguimiento a permisos | Solicitar permisos |
-| Atencion al Cliente | Revisa, clasifica y aprueba | Asignar riesgo y actividad |
-| Mantenimiento | Crea y revisa tecnicamente | Auto-aprobacion segun regla |
-| Operaciones | Revision tecnica departamental | Aprobar o rechazar |
-| Seguridad | Revision tecnica departamental | Aprobar o rechazar |
-| CCO | Monitoreo en tiempo real | Cancelar permisos activos |
-| Guardia | Control de acceso fisico | Escanear QR |
-| Administrador | Gestion integral del sistema | Configuracion y control |
+| Rol | En pestaña | Funcion principal | Accion clave |
+|---|---|---|---|
+| **Contacto** | Documentacion | Crea permisos y da seguimiento | Solicitar permisos |
+| **Atencion al Cliente** | Revisores y Aprobadores | Revisa, clasifica y aprueba | Asignar riesgo y actividad |
+| **Mantenimiento** | Revisores y Aprobadores | Crea y revisa tecnicamente | Auto-aprobacion segun regla |
+| **Operaciones** | Revisores y Aprobadores | Revision tecnica departamental | Aprobar o rechazar |
+| **Seguridad** | Revisores y Aprobadores | Revision tecnica departamental | Aprobar o rechazar |
+| **CCO** | Operaciones | Monitoreo en tiempo real | Cancelar permisos activos |
+| **Guardia** | Operaciones | Control de acceso fisico | Escanear QR |
+| **Administrador** | Administración | Gestion integral del sistema | Configuracion y control |
 
 <Callout kind="tip">
-Si estas implementando nuevas paginas, manten una estructura consistente: objetivo claro, pasos secuenciales y alertas solo cuando exista riesgo operativo real.
+**Eres nuevo?** Accede a la pestaña **Documentacion**, abre **Primeros Pasos** y comienza por "Acceso al Sistema".
 </Callout>

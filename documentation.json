@@ -170,28 +170,6 @@
                 "path": "notificaciones/email"
               }
             ]
-          },
-          {
-            "group": "Components",
-            "icon": "layers",
-            "pages": [
-              {
-                "title": "Optimizacion de Documentacion",
-                "path": "components/optimizacion-documentacion"
-              },
-              {
-                "title": "Callouts",
-                "path": "components/callouts"
-              },
-              {
-                "title": "Steps",
-                "path": "components/steps"
-              },
-              {
-                "title": "Tabs",
-                "path": "components/tabs"
-              }
-            ]
           }
         ]
       },

@@ -67,34 +67,6 @@
             ]
           },
           {
-            "group": "Mi Perfil",
-            "pages": [
-              {
-                "title": "Mis Datos",
-                "path": "acceso/codigo-qr"
-              },
-              {
-                "title": "Registro de Entrada y Salida",
-                "path": "acceso/registro-entrada-y-salida"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Revisores y Aprobadores",
-        "icon": "check-circle",
-        "groups": [
-          {
-            "group": "Guia de Revisores",
-            "pages": [
-              {
-                "title": "Roles y Responsabilidades",
-                "path": "primeros-pasos/roles"
-              }
-            ]
-          },
-          {
             "group": "Proceso de Aprobacion",
             "pages": [
               {
@@ -116,11 +88,15 @@
             ]
           },
           {
-            "group": "Dashboards de Revision",
+            "group": "Mi Perfil y Acceso",
             "pages": [
               {
-                "title": "Dashboard Atencion al Cliente",
-                "path": "dashboards/atencion"
+                "title": "Mis Datos",
+                "path": "acceso/codigo-qr"
+              },
+              {
+                "title": "Registro de Entrada y Salida",
+                "path": "acceso/registro-entrada-y-salida"
               }
             ]
           }
@@ -136,10 +112,6 @@
               {
                 "title": "Dashboard CCO",
                 "path": "dashboards/cco"
-              },
-              {
-                "title": "Control de Acceso",
-                "path": "acceso/codigo-qr"
               }
             ]
           },
@@ -149,10 +121,6 @@
               {
                 "title": "Scanner de Guardia",
                 "path": "acceso/scanner-de-guardia"
-              },
-              {
-                "title": "Registro de Entrada y Salida",
-                "path": "acceso/registro-entrada-y-salida"
               },
               {
                 "title": "Dashboard Guardia",
@@ -172,6 +140,10 @@
               {
                 "title": "Dashboard Administrador",
                 "path": "dashboards/admin"
+              },
+              {
+                "title": "Dashboard Atencion al Cliente",
+                "path": "dashboards/atencion"
               },
               {
                 "title": "Dashboard Contacto",

@@ -103,7 +103,13 @@
                 "path": "acceso/registro-entrada-y-salida"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Administración",
+        "icon": "settings",
+        "groups": [
           {
             "group": "Dashboards",
             "pages": [
@@ -130,7 +136,7 @@
             ]
           },
           {
-            "group": "Administracion",
+            "group": "Gestion del Sistema",
             "pages": [
               {
                 "title": "Gestion de Empresas",

@@ -2,10 +2,14 @@
   "name": "Pabellon M - Folios",
   "colors": {
     "light": {
-      "brand": "#F97316"
+      "brand": "#0d4082",
+      "heading": "#1a1a1a",
+      "text": "#374151"
     },
     "dark": {
-      "brand": "#FDBA74"
+      "brand": "#0d4082",
+      "heading": "#f2f2f2",
+      "text": "#c1c1c1"
     }
   },
   "navigation": {
@@ -213,5 +217,8 @@
   },
   "template": "atlas",
   "title": "Pabellon M - Folios",
-  "description": "Documentacion del funcionamiento de la app de folios."
+  "description": "Documentacion del funcionamiento de la app de folios.",
+  "logo-light": "https://blob-cdn.documentation.ai/org-a902b632-a650-4486-b861-7e3289c20143/doc-8466014e-779f-466a-864c-6e0d592b3414/1776585297981-y2m8exvdeo-logo-color.png?fm=auto&auto=compress%2Cformat",
+  "logo-dark": "https://blob-cdn.documentation.ai/org-a902b632-a650-4486-b861-7e3289c20143/doc-8466014e-779f-466a-864c-6e0d592b3414/1776585311152-aow4y2f549g-logo.png?fm=auto&auto=compress%2Cformat",
+  "favicon": "https://blob-cdn.documentation.ai/org-a902b632-a650-4486-b861-7e3289c20143/doc-8466014e-779f-466a-864c-6e0d592b3414/1776585319875-6n52w191bdk-favicon.png?fm=auto&auto=compress%2Cformat"
 }

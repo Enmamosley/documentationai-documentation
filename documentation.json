@@ -58,6 +58,18 @@
               {
                 "title": "Crear un Permiso",
                 "path": "permisos/crear-un-permiso"
+              },
+              {
+                "title": "Estados del Permiso",
+                "path": "permisos/estados-del-permiso"
+              },
+              {
+                "title": "Seguimiento de Permisos",
+                "path": "permisos/seguimiento-de-permisos"
+              },
+              {
+                "title": "Descargar PDF del Permiso",
+                "path": "permisos/descargar-pdf-del-permiso"
               }
             ]
           },

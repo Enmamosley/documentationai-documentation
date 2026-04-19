@@ -42,10 +42,6 @@
               {
                 "title": "Dashboard Contacto",
                 "path": "dashboards/contacto"
-              },
-              {
-                "title": "Dashboard Pabellon M",
-                "path": "dashboards/pabellonm"
               }
             ]
           },
@@ -122,6 +118,10 @@
               {
                 "title": "Dashboard Atencion al Cliente",
                 "path": "dashboards/atencion"
+              },
+              {
+                "title": "Dashboard Pabellon M",
+                "path": "dashboards/pabellonm"
               }
             ]
           },

@@ -133,6 +133,10 @@
               {
                 "title": "Create Your First Page",
                 "path": "help-center/guides/setup-project"
+              },
+              {
+                "title": "Getting Started",
+                "path": "help-center/guides/getting-started"
               }
             ]
           }

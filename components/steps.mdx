@@ -1,26 +1,37 @@
 ---
 title: Steps
-description: Guide users through linear, task-based flows.
+description: Estandar para documentar procesos secuenciales en Pabellon M.
 ---
 
 # Steps
 
-Steps show a linear flow for setup and tutorials.
+Usa Steps cuando el lector deba seguir un orden estricto de acciones.
 
-## Example
+## Ejemplo real: crear permiso desde rol Contacto
 
 <Steps>
-  <Step title="Install dependencies" icon="download">
-    Run the installation command to add required packages to your project.
+  <Step title="Capturar datos del trabajo" icon="file-text">
+    Completa empresa proveedora, area, descripcion y rango de fechas.
   </Step>
-  <Step title="Configure settings" icon="settings">
-    Create a configuration file in your project root with your API credentials.
+  <Step title="Registrar tecnicos" icon="users">
+    Agrega al menos un tecnico con nombre valido; NSS es opcional.
   </Step>
-  <Step title="Deploy documentation" icon="rocket">
-    Push your changes and deploy to production.
+  <Step title="Enviar solicitud" icon="send">
+    Revisa la informacion y envia el permiso para revision.
+  </Step>
+  <Step title="Dar seguimiento" icon="activity">
+    Consulta estados y atiende observaciones hasta llegar a aprobacion final.
   </Step>
 </Steps>
 
-## Learn more
+## Cuando usar Steps
 
-Read the full Steps guide at https://documentation.ai/docs/components/steps.
+- Flujos de aprobacion por etapas.
+- Procedimientos de registro QR (entrada y salida).
+- Tareas administrativas con orden obligatorio.
+
+## Cuando no usar Steps
+
+- Listas sin secuencia.
+- Secciones conceptuales (definiciones o glosario).
+- Comparativas entre roles (usar Tabs).

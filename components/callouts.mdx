@@ -1,26 +1,42 @@
 ---
 title: Callouts
-description: Highlight tips, warnings, and important notes.
+description: Estandar para alertas, notas y recomendaciones en la documentacion de Pabellon M.
 ---
 
 # Callouts
 
-Use callouts to draw attention to important information without breaking the reading flow.
+Usa Callouts para resaltar informacion critica sin romper el flujo de lectura.
 
-## Example
+## Tipos recomendados
 
 <Callout kind="tip">
-  Use environment variables to store sensitive configuration like API keys.
+  Usa este tipo para buenas practicas operativas (por ejemplo, validaciones previas antes de enviar un permiso).
 </Callout>
 
 <Callout kind="info">
-  Keep callouts short so they stay easy to scan.
+  Usa este tipo para contexto util: reglas del sistema, restricciones y comportamiento esperado.
 </Callout>
 
 <Callout kind="alert">
-  Double-check destructive actions before proceeding.
+  Usa este tipo para bloqueos reales o acciones de alto impacto (cancelaciones, rechazos, inconsistencias de horario).
 </Callout>
 
-## Learn more
+## Ejemplos del sistema
 
-Read the full Callout guide at https://documentation.ai/docs/components/callout.
+<Callout kind="info">
+**Clasificacion manual por Atencion al Cliente**
+
+Los permisos creados por Contacto requieren clasificacion de riesgo y validacion de actividad antes de aprobarse.
+</Callout>
+
+<Callout kind="tip">
+**Minimo un tecnico**
+
+Todo permiso debe incluir al menos un tecnico con nombre valido antes del envio.
+</Callout>
+
+<Callout kind="alert">
+**Bloqueos de horario**
+
+Si existe un bloqueo activo para el rango seleccionado, el permiso no puede enviarse hasta corregir fecha u hora.
+</Callout>

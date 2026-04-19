@@ -40,7 +40,7 @@
                 "path": "primeros-pasos/navegacion-general"
               },
               {
-                "title": "Dashboard Contacto",
+                "title": "Mi Dashboard",
                 "path": "dashboards/contacto"
               }
             ]
@@ -89,8 +89,8 @@
             "group": "Guardia y Acceso",
             "pages": [
               {
-                "title": "Guardia",
-                "path": "operaciones/guardia"
+                "title": "Dashboard Guardia",
+                "path": "dashboards/guardia"
               },
               {
                 "title": "Scanner de Guardia",
@@ -99,10 +99,6 @@
               {
                 "title": "Registro de Entrada y Salida",
                 "path": "operaciones/registro-entrada-y-salida"
-              },
-              {
-                "title": "Dashboard Guardia",
-                "path": "dashboards/guardia"
               }
             ]
           }
@@ -130,16 +126,21 @@
             ]
           },
           {
-            "group": "Revision y Aprobacion",
+            "group": "Conceptos del Sistema",
             "pages": [
               {
-                "title": "¿Qué es un Permiso?",
+                "title": "Qué es un Permiso",
                 "path": "permisos/que-es-un-permiso"
               },
               {
                 "title": "Roles y Perfiles",
                 "path": "primeros-pasos/roles"
-              },
+              }
+            ]
+          },
+          {
+            "group": "Flujo de Aprobacion",
+            "pages": [
               {
                 "title": "Flujo General",
                 "path": "aprobacion/flujo-general"
@@ -170,12 +171,12 @@
                 "path": "administracion/usuarios"
               },
               {
-                "title": "Gestion de Workflows",
-                 "path": "administracion/workflows"
-              },
-              {
                 "title": "Actividades y Clasificacion de Riesgo",
                 "path": "administracion/actividades"
+              },
+              {
+                "title": "Gestion de Workflows",
+                "path": "administracion/workflows"
               },
               {
                 "title": "Bloqueos de Horario",

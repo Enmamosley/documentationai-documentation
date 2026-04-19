@@ -156,27 +156,27 @@
             "pages": [
               {
                 "title": "Gestion de Empresas",
-                "path": "admin/empresas"
+                 "path": "administracion/empresas"
               },
               {
                 "title": "Gestion de Usuarios",
-                "path": "admin/usuarios"
+                 "path": "administracion/usuarios"
               },
               {
                 "title": "Actividades y Clasificacion de Riesgo",
-                "path": "admin/actividades"
+                 "path": "administracion/actividades"
               },
               {
                 "title": "Bloqueos de Horario",
-                "path": "admin/bloqueos"
+                 "path": "administracion/bloqueos"
               },
               {
                 "title": "Anuncios del Sistema",
-                "path": "admin/anuncios"
+                 "path": "administracion/anuncios"
               },
               {
                 "title": "Auditoria",
-                "path": "admin/auditoria"
+                 "path": "administracion/auditoria"
               }
             ]
           },

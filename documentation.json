@@ -73,21 +73,16 @@
         ]
       },
       {
-        "tab": "Operaciones",
-        "icon": "activity",
+        "tab": "Administración",
+        "icon": "settings",
         "groups": [
           {
-            "group": "Monitoreo",
+            "group": "Monitoreo y Acceso",
             "pages": [
               {
                 "title": "Dashboard CCO",
                 "path": "dashboards/cco"
-              }
-            ]
-          },
-          {
-            "group": "Guardia y Acceso",
-            "pages": [
+              },
               {
                 "title": "Dashboard Guardia",
                 "path": "dashboards/guardia"
@@ -101,13 +96,7 @@
                 "path": "operaciones/registro-entrada-y-salida"
               }
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Administración",
-        "icon": "settings",
-        "groups": [
+          },
           {
             "group": "Dashboards Administrativos",
             "pages": [

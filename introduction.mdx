@@ -8,20 +8,20 @@ description: Punto de entrada al Sistema de Permisos de Trabajo de Pabellon M.
 Gestiona permisos para proveedores y contratistas en Pabellon M de forma segura, trazable y ordenada.
 
 <Callout kind="info">
-Esta documentacion esta organizada por rol y responsabilidad. Cada seccion contiene la informacion relevante para tu función especifica.
+Esta documentacion esta separada por tipo de usuario para evitar mezclar el flujo del locatario con la operacion y la administracion del sistema.
 </Callout>
 
 ## Encuentra tu seccion
 
 <Columns cols={2}>
-    <Card title="📖 Documentacion" href="#" icon="book">
-        **Flujo completo del sistema.** Usuario normal crea permisos, revisores aprueban, gestiona seguimiento y registra acceso.
+    <Card title="📖 Locatarios" href="#" icon="book">
+        **Para el usuario normal que solicita permisos.** Aqui esta el flujo para crear permisos, revisar estados, descargar PDF y consultar QR.
     </Card>
     <Card title="🎯 Operaciones" href="#" icon="activity">
-        **Para CCO y Guardia.** Monitorea permisos en tiempo real y controla acceso físico en el sitio.
+        **Para CCO y Guardia.** Aqui esta el monitoreo operativo y el control de acceso en sitio.
     </Card>
     <Card title="⚙️ Administración" href="#" icon="settings">
-        **Para Administradores y Supervisores.** Gestiona empresas, usuarios, actividades, bloqueos y auditoria del sistema.
+        **Para revisores, aprobadores y administradores.** Aqui esta la revisión de permisos, la configuracion del sistema y la gestion operativa interna.
     </Card>
 </Columns>
 
@@ -29,15 +29,15 @@ Esta documentacion esta organizada por rol y responsabilidad. Cada seccion conti
 
 | Rol | En pestaña | Funcion principal | Accion clave |
 |---|---|---|---|
-| **Contacto** | Documentacion | Crea permisos y da seguimiento | Solicitar permisos |
-| **Atencion al Cliente** | Documentacion + Administración | Revisa, clasifica y aprueba | Asignar riesgo y actividad |
-| **Mantenimiento** | Documentacion | Crea y revisa tecnicamente | Auto-aprobacion segun regla |
-| **Operaciones** | Documentacion | Revision tecnica departamental | Aprobar o rechazar |
-| **Seguridad** | Documentacion | Revision tecnica departamental | Aprobar o rechazar |
+| **Contacto** | Locatarios | Crea permisos y da seguimiento | Solicitar permisos |
+| **Atencion al Cliente** | Administración | Revisa, clasifica y aprueba | Asignar riesgo y actividad |
+| **Mantenimiento** | Administración | Crea y revisa tecnicamente | Auto-aprobacion segun regla |
+| **Operaciones** | Administración | Revision tecnica departamental | Aprobar o rechazar |
+| **Seguridad** | Administración | Revision tecnica departamental | Aprobar o rechazar |
 | **CCO** | Operaciones | Monitoreo en tiempo real | Cancelar permisos activos |
 | **Guardia** | Operaciones | Control de acceso fisico | Escanear QR |
 | **Administrador** | Administración | Gestion integral del sistema | Configuracion y control |
 
 <Callout kind="tip">
-**Eres nuevo?** Accede a **Documentacion**, abre **Primeros Pasos** y comienza por "Acceso al Sistema".
+**Eres locatario?** Entra a **Locatarios** y sigue este orden: acceso, dashboard contacto, crear permiso y seguimiento.
 </Callout>

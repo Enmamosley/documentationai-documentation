@@ -11,7 +11,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentacion",
+        "tab": "Locatarios",
         "icon": "book",
         "groups": [
           {
@@ -36,13 +36,13 @@
                 "path": "primeros-pasos/navegacion-general"
               },
               {
-                "title": "Roles y Perfiles",
-                "path": "primeros-pasos/roles"
+                "title": "Dashboard Contacto",
+                "path": "dashboards/contacto"
               }
             ]
           },
           {
-            "group": "Permisos de Trabajo",
+            "group": "Crear y Gestionar Permisos",
             "pages": [
               {
                 "title": "Que es un Permiso",
@@ -63,40 +63,19 @@
               {
                 "title": "Descargar PDF del Permiso",
                 "path": "permisos/descargar-pdf-del-permiso"
-              }
-            ]
-          },
-          {
-            "group": "Proceso de Aprobacion",
-            "pages": [
-              {
-                "title": "Flujo General",
-                "path": "aprobacion/flujo-general"
               },
               {
-                "title": "Revision de Atencion al Cliente",
-                "path": "aprobacion/revision-de-atencion"
-              },
-              {
-                "title": "Revision Departamental",
-                "path": "aprobacion/revision-departamental"
-              },
-              {
-                "title": "Aprobacion Final",
-                "path": "aprobacion/aprobacion-final"
-              }
-            ]
-          },
-          {
-            "group": "Mi Perfil y Acceso",
-            "pages": [
-              {
-                "title": "Mis Datos",
+                "title": "Codigo QR",
                 "path": "acceso/codigo-qr"
-              },
+              }
+            ]
+          },
+          {
+            "group": "Consulta y Seguimiento",
+            "pages": [
               {
-                "title": "Registro de Entrada y Salida",
-                "path": "acceso/registro-entrada-y-salida"
+                "title": "Estados del Permiso",
+                "path": "permisos/estados-del-permiso"
               }
             ]
           }
@@ -123,6 +102,10 @@
                 "path": "acceso/scanner-de-guardia"
               },
               {
+                "title": "Registro de Entrada y Salida",
+                "path": "acceso/registro-entrada-y-salida"
+              },
+              {
                 "title": "Dashboard Guardia",
                 "path": "dashboards/guardia"
               }
@@ -144,10 +127,31 @@
               {
                 "title": "Dashboard Atencion al Cliente",
                 "path": "dashboards/atencion"
+              }
+            ]
+          },
+          {
+            "group": "Revision y Aprobacion",
+            "pages": [
+              {
+                "title": "Roles y Perfiles",
+                "path": "primeros-pasos/roles"
               },
               {
-                "title": "Dashboard Contacto",
-                "path": "dashboards/contacto"
+                "title": "Flujo General",
+                "path": "aprobacion/flujo-general"
+              },
+              {
+                "title": "Revision de Atencion al Cliente",
+                "path": "aprobacion/revision-de-atencion"
+              },
+              {
+                "title": "Revision Departamental",
+                "path": "aprobacion/revision-departamental"
+              },
+              {
+                "title": "Aprobacion Final",
+                "path": "aprobacion/aprobacion-final"
               }
             ]
           },

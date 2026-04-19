@@ -1,5 +1,5 @@
 {
-  "name": "Pabellon M - Permisos de Trabajo",
+  "name": "Pabellon M - Folios",
   "colors": {
     "light": {
       "brand": "#F97316"
@@ -160,27 +160,27 @@
             "pages": [
               {
                 "title": "Gestion de Empresas",
-                 "path": "administracion/empresas"
+                "path": "administracion/empresas"
               },
               {
                 "title": "Gestion de Usuarios",
-                 "path": "administracion/usuarios"
+                "path": "administracion/usuarios"
               },
               {
                 "title": "Actividades y Clasificacion de Riesgo",
-                 "path": "administracion/actividades"
+                "path": "administracion/actividades"
               },
               {
                 "title": "Bloqueos de Horario",
-                 "path": "administracion/bloqueos"
+                "path": "administracion/bloqueos"
               },
               {
                 "title": "Anuncios del Sistema",
-                 "path": "administracion/anuncios"
+                "path": "administracion/anuncios"
               },
               {
                 "title": "Auditoria",
-                 "path": "administracion/auditoria"
+                "path": "administracion/auditoria"
               }
             ]
           },
@@ -210,5 +210,8 @@
         ]
       }
     ]
-  }
+  },
+  "template": "atlas",
+  "title": "Pabellon M - Folios",
+  "description": "Documentacion del funcionamiento de la app de folios."
 }

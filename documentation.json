@@ -77,6 +77,16 @@
         "icon": "settings",
         "groups": [
           {
+            "group": "Inicio",
+            "pages": [
+              {
+                "title": "Administración",
+                "path": "administracion/inicio",
+                "icon": "home"
+              }
+            ]
+          },
+          {
             "group": "Monitoreo y Acceso",
             "pages": [
               {

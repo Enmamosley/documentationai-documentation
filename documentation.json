@@ -89,6 +89,10 @@
             "group": "Guardia y Acceso",
             "pages": [
               {
+                "title": "Guardia",
+                "path": "acceso/guardia"
+              },
+              {
                 "title": "Scanner de Guardia",
                 "path": "acceso/scanner-de-guardia"
               },
@@ -128,6 +132,10 @@
           {
             "group": "Revision y Aprobacion",
             "pages": [
+              {
+                "title": "¿Qué es un Permiso?",
+                "path": "permisos/que-es-un-permiso"
+              },
               {
                 "title": "Roles y Perfiles",
                 "path": "primeros-pasos/roles"

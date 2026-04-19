@@ -36,6 +36,19 @@
             ]
           },
           {
+            "group": "Primeros Pasos",
+            "pages": [
+              {
+                "title": "Acceso al Sistema",
+                "path": "primeros-pasos/acceso"
+              },
+              {
+                "title": "Roles y Perfiles",
+                "path": "primeros-pasos/roles"
+              }
+            ]
+          },
+          {
             "group": "Components",
             "icon": "layers",
             "pages": [

@@ -1,0 +1,77 @@
+---
+title: Registro de Entrada y Salida
+description: Cómo registrar eventos de acceso (entrada y salida) y revisarlos.
+---
+
+## Registro de Entrada y Salida
+
+Usa este registro para dejar constancia de cada evento de acceso en un permiso. Sirve para marcar la entrada, marcar la salida y revisar el historial cuando necesitas verificar qué ocurrió con un acceso.
+
+## Qué se registra
+
+El registro guarda la información necesaria para identificar el evento y su estado:
+
+- Fecha y hora del evento.
+- Persona asociada al permiso.
+- Dirección del evento: entrada o salida.
+- Guardia que realizó la acción.
+- Permiso relacionado.
+- Estado del permiso después del registro.
+
+<Callout kind="info">
+
+Para generar el evento, usa el QR o el scanner de guardia según el flujo operativo. Para consultar o administrar los registros, necesitas los permisos correspondientes en el sistema.
+
+</Callout>
+
+## Pasos
+
+<Steps>
+  <Step title="Registrar la entrada">
+
+  Presenta el PDF o el QR del permiso. Luego escanea el código con el flujo de entrada, verifica las fotos asociadas y registra el evento.
+
+  </Step>
+  <Step title="Confirmar el cambio de estado">
+
+  Después de registrar la entrada, el permiso pasa a **En Uso** y queda disponible para seguimiento en el historial.
+
+  </Step>
+  <Step title="Registrar la salida">
+
+  Cuando la persona abandone el acceso, vuelve a presentar el permiso, escanea el código y registra la salida con el mismo flujo operativo.
+
+  </Step>
+  <Step title="Revisar el historial">
+
+  Abre el detalle del permiso, el panel de CCO o los logs de administración para confirmar qué guardia registró el evento y en qué momento ocurrió.
+
+  </Step>
+</Steps>
+
+## Formato y consistencia
+
+Los registros siguen una estructura consistente para facilitar la revisión:
+
+- Mismo permiso para la entrada y la salida.
+- Trazabilidad por fecha, hora y guardia.
+- Estado actualizado después de cada evento.
+- Historial visible en el detalle del permiso, el dashboard de CCO y los logs administrativos.
+
+## Revisión y seguimiento
+
+<Callout kind="info">
+
+Si ves diferencias entre la entrada y la salida, revisa el historial del permiso, el dashboard de CCO y los logs de administración. Si no se registró la salida, el permiso permanece **En Uso** hasta que se cierre de forma manual.
+
+</Callout>
+
+La tolerancia de entrada es de 30 minutos. Si el evento no coincide con el tiempo esperado o el permiso queda abierto, usa ese dato para identificar el desvío y continuar la revisión.
+
+## Siguientes pasos
+
+<Cards>
+  <Card title="Código QR" href="/acceso/codigo-qr" icon="code" />
+
+  <Card title="Scanner de guardia" href="/acceso/scanner-de-guardia" icon="terminal" />
+</Cards>

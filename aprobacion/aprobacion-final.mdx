@@ -1,0 +1,64 @@
+---
+title: Aprobación Final
+description: Cierre del proceso de aprobación: qué significa la aprobación final y el siguiente estado.
+---
+
+## Aprobación final
+
+La aprobación final es el último paso del proceso para permisos que ya pasaron por revisión departamental. Solo aplica a permisos de riesgo medio o alto; los de riesgo bajo se aprueban directamente en Atención al Cliente.
+
+## Cuándo se requiere aprobación final
+
+Usa esta etapa cuando el permiso ya recibió aprobación del departamento correspondiente y todavía necesita la validación final de Atención al Cliente.
+
+- **Aplica a:** permisos con revisión departamental.
+- **No aplica a:** permisos de riesgo bajo con aprobación directa en Atención al Cliente.
+
+## Proceso
+
+La secuencia de trabajo es esta:
+
+1. El departamento aprueba el permiso.
+2. El permiso cambia a **Pendiente de Aprobación Final**.
+3. El permiso aparece en el panel de Atención al Cliente.
+4. Atención al Cliente revisa la resolución.
+5. Si hace falta, puede agregar comentarios finales opcionales de hasta 1000 caracteres.
+6. Atención al Cliente aprueba o rechaza de forma definitiva.
+
+## Al aprobar
+
+Cuando Atención al Cliente aprueba el permiso:
+
+- el estado cambia a **Aprobado**;
+- se generan automáticamente el QR y el PDF;
+- se envían notificaciones al solicitante por el sistema, correo electrónico y WhatsApp, si está configurado.
+
+## Al rechazar
+
+Cuando Atención al Cliente rechaza el permiso:
+
+- el motivo de rechazo es obligatorio;
+- el motivo debe tener al menos 10 caracteres;
+- el solicitante recibe una notificación.
+
+Si el solicitante necesita continuar con el trámite, debe crear un nuevo permiso.
+
+<Callout kind="info">
+
+Antes de cerrar el flujo, verifica que el estado final coincida con la resolución registrada.
+
+</Callout>
+
+## Siguientes pasos
+
+<Columns cols={3}>
+  <Card title="Flujo general de aprobación" href="/aprobacion/flujo-general" icon="arrow-right">
+    Revisa el recorrido completo del proceso de aprobación.
+  </Card>
+  <Card title="Seguimiento de permisos" href="/permisos/seguimiento-de-permisos" icon="bar-chart">
+    Consulta cómo dar seguimiento al estado de un permiso.
+  </Card>
+  <Card title="Estados del permiso" href="/permisos/estados-del-permiso" icon="settings">
+    Identifica cada estado y su significado dentro del ciclo de vida del permiso.
+  </Card>
+</Columns>

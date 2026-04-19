@@ -74,6 +74,44 @@
             ]
           },
           {
+            "group": "Proceso de Aprobación",
+            "pages": [
+              {
+                "title": "Flujo General",
+                "path": "aprobacion/flujo-general"
+              },
+              {
+                "title": "Revisión de Atención al Cliente",
+                "path": "aprobacion/revision-de-atencion"
+              },
+              {
+                "title": "Revisión Departamental",
+                "path": "aprobacion/revision-departamental"
+              },
+              {
+                "title": "Aprobación Final",
+                "path": "aprobacion/aprobacion-final"
+              }
+            ]
+          },
+          {
+            "group": "Control de Acceso",
+            "pages": [
+              {
+                "title": "Código QR",
+                "path": "acceso/codigo-qr"
+              },
+              {
+                "title": "Scanner de Guardia",
+                "path": "acceso/scanner-de-guardia"
+              },
+              {
+                "title": "Registro de Entrada y Salida",
+                "path": "acceso/registro-entrada-y-salida"
+              }
+            ]
+          },
+          {
             "group": "Components",
             "icon": "layers",
             "pages": [

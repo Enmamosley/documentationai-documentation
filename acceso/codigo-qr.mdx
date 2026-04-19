@@ -1,0 +1,93 @@
+---
+title: Código QR
+description: Guía práctica para usar el código QR en el control de acceso.
+---
+
+## Código QR
+
+El código QR se genera automáticamente cuando apruebas el permiso y sirve para validar el acceso en el punto de control. El guardia lo escanea para revisar la información clave del permiso y del personal.
+
+## Cuándo usarlo
+
+Usa el código QR cuando necesites validar el acceso en estos casos:
+
+- Al presentar un permiso aprobado en el acceso.
+- Cuando el permiso esté en estado **Aprobado** o **En Uso**.
+- Si necesitas mostrar el permiso en PDF o en el enlace de descarga.
+- Cuando el personal de control debe verificar los datos del permiso con un escáner.
+
+<Callout kind="info">
+
+Para escanear el QR necesitas un dispositivo con cámara o lector, conexión disponible y los permisos necesarios para validar accesos.
+
+</Callout>
+
+## Cómo funciona
+
+- El QR se genera automáticamente al aprobar el permiso.
+- El QR aparece en el PDF, en el enlace de descarga y en el detalle del permiso.
+- El guardia presenta el QR y el sistema lo escanea para validar el acceso.
+
+<Callout kind="info">
+
+El QR mantiene validez solo en los estados **Aprobado** y **En Uso**. También aplica una tolerancia de horario de 30 minutos.
+
+</Callout>
+
+## Pasos
+
+<Steps>
+
+<Step title="Abre el permiso aprobado">
+
+Ubica el permiso que vas a validar y confirma que esté en estado **Aprobado** o **En Uso**.
+
+</Step>
+
+<Step title="Muestra el código QR">
+
+Presenta el QR desde el PDF, el enlace de descarga o el detalle del permiso.
+
+</Step>
+
+<Step title="Escanea el código">
+
+Usa el dispositivo de control para leer el QR. El sistema toma los datos clave del permiso y del personal.
+
+</Step>
+
+<Step title="Revisa el resultado">
+
+Confirma que el permiso sea válido y que el acceso quede listo para continuar con el registro correspondiente.
+
+</Step>
+
+</Steps>
+
+## Verificación
+
+Un escaneo correcto muestra estas señales:
+
+- El QR se reconoce sin error y devuelve los datos del permiso.
+- El estado del permiso y el horario están dentro de la validez permitida.
+
+### Problemas comunes
+
+- **El QR no escanea**: revisa que el lector o la cámara funcionen y que el código se vea completo.
+- **El QR aparece como inválido**: confirma que el permiso esté en estado **Aprobado** o **En Uso**.
+- **Está fuera de horario**: verifica la tolerancia de 30 minutos.
+- **El guardia no tiene scanner**: usa un dispositivo con cámara o lector disponible.
+
+## Siguientes pasos
+
+<Columns cols={2}>
+
+<Card title="Scanner de guardia" href="/acceso/scanner-de-guardia" icon="scan-line">
+Sigue el flujo de escaneo desde el punto de control.
+</Card>
+
+<Card title="Registro de entrada y salida" href="/acceso/registro-entrada-y-salida" icon="arrow-right">
+Continúa con el registro del acceso una vez validado el permiso.
+</Card>
+
+</Columns>

@@ -1,0 +1,62 @@
+---
+title: Dashboard Mantenimiento
+description: Guia operativa del rol de Mantenimiento — revision tecnica y creacion de permisos propios.
+---
+
+# Dashboard Mantenimiento
+
+El rol de **Mantenimiento** tiene capacidad dual: puede crear sus propios permisos de trabajo (con auto-aprobacion) y revisar permisos remitidos por Atencion al Cliente.
+
+## Vista principal
+
+| Seccion | Contenido |
+|---|---|
+| **Pendientes de revision** | Permisos en estado `en_revision_departamento` asignados a Mantenimiento |
+| **Aprobados por mi** | Permisos que Mantenimiento ya revisó y aprobó |
+| **Mis permisos** | Permisos creados por el propio usuario de Mantenimiento |
+
+## Flujo 1: Crear permiso propio (auto-aprobacion)
+
+Cuando Mantenimiento crea un permiso para sus propias actividades:
+
+1. Crea el permiso desde **Nueva Solicitud**
+2. El sistema lo aprueba **automaticamente** — no pasa por Atencion al Cliente
+3. Se genera el **QR y PDF** de inmediato
+4. El permiso queda en estado **Aprobado**
+
+<Callout kind="info">
+**Auto-aprobacion exclusiva de Mantenimiento**
+
+Solo el rol de Mantenimiento tiene este flujo. Sus permisos se aprueban sin ninguna intervencion manual porque corresponden a actividades propias del centro comercial.
+</Callout>
+
+## Flujo 2: Revisar permisos remitidos
+
+Cuando Atencion al Cliente clasifica un permiso como riesgo **medio** o **alto** y lo asigna a Mantenimiento:
+
+1. El permiso aparece en **Pendientes de revision**
+2. Revisa los detalles: empresa, area de trabajo, tecnicos, documentos adjuntos
+3. Decide:
+   - **Aprobar** — pasa a `pendiente_aprobacion_final` (ATC da visto bueno final)
+   - **Rechazar** — requiere minimo 10 caracteres de observaciones
+
+<Callout kind="alert">
+**El rechazo es definitivo**
+
+Si rechazas un permiso, el solicitante debe crear uno nuevo. No se puede reabrir un permiso rechazado.
+</Callout>
+
+## Revision en cadena
+
+Un permiso puede requerir revision de multiples departamentos en orden. Si Mantenimiento no es el unico revisador:
+
+- Apruebas tu parte → el siguiente departamento recibe el permiso
+- Todos deben aprobar antes de que pase a `pendiente_aprobacion_final`
+
+## Acciones disponibles
+
+- Crear permisos propios (auto-aprobacion)
+- Revisar y aprobar permisos asignados
+- Rechazar permisos con observaciones
+- Descargar PDF de permisos de su cadena
+- Ver historial de revisiones

@@ -1,41 +1,45 @@
 ---
 title: Notificaciones por Email
-description: Guia operativa del sistema de permisos de trabajo.
+description: Correos que envia el sistema segun el evento del permiso.
 ---
 
 # Notificaciones por Email
 
-Además de las notificaciones dentro del sistema, se envían **correos electrónicos** para los eventos más importantes.
+Ademas de las notificaciones internas, el sistema envia correos electronicos en los eventos mas importantes.
 
-## ¿Cuándo se envía un email?
+## Correos enviados por evento
 
-| Evento | Contenido del email |
-|---|---|
-| **Permiso aprobado** | Confirmación + enlace para descargar el PDF con QR |
-| **Permiso rechazado** | Motivo del rechazo y observaciones |
+| Correo | Destinatario | Cuando se envia |
+|---|---|---|
+| **Solicitud recibida** | Contacto solicitante | Al crear el permiso (flujo estandar) |
+| **Nueva solicitud** | Atencion al Cliente | Al recibir permiso de contacto externo |
+| **Permiso aprobado** | Contacto solicitante | Al aprobar definitivamente (incluye enlace PDF) |
+| **Permiso rechazado** | Contacto solicitante | Al rechazar en cualquier etapa |
+| **Remitido a departamento** | Departamento asignado | Cuando ATC remite a revision tecnica |
+| **Aprobacion final** | Contacto solicitante | Al completar aprobacion final de ATC |
 
-## Enlace de descarga seguro
+## Enlace de descarga PDF
 
-Cuando tu permiso es aprobado, el email incluye un **enlace directo** para descargar el PDF:
+Cuando el permiso es aprobado, el email incluye un **enlace directo** para descargar el PDF:
 
-- No necesitas iniciar sesión para usarlo
-- El enlace contiene un token de seguridad
-- Es de un solo uso o de tiempo limitado
+- No requiere iniciar sesion
+- Contiene token de seguridad unico
+- Incluye el codigo QR listo para usar en acceso
 
-## WhatsApp (si está configurado)
+## WhatsApp
 
-El sistema también puede enviar notificaciones por **WhatsApp** para los eventos de permiso aprobado.
+El sistema puede enviar notificaciones de **permiso aprobado** por WhatsApp cuando esta integrado.
 
 <Callout kind="info">
-**Configuración de WhatsApp**
+**Configuracion de WhatsApp**
 
-La integración con WhatsApp depende de la configuración del sistema. Consulta con el administrador si esta funcionalidad está activa.
-
+La integracion con WhatsApp depende de la configuracion del sistema. Consulta con el administrador si esta activa.
 </Callout>
-## Problemas con notificaciones
 
-Si no recibes notificaciones por email:
+## Problemas con emails
 
-1. Verifica que tu correo en el sistema sea correcto (en **Mi Perfil**)
-2. Revisa la carpeta de **spam** o correo no deseado
+Si no recibes correos:
+
+1. Verifica que tu correo en **Mi Perfil** sea correcto
+2. Revisa la carpeta de **spam**
 3. Contacta al administrador del sistema

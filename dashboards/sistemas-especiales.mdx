@@ -1,0 +1,45 @@
+---
+title: Dashboard Sistemas Especiales
+description: Guia operativa del rol Sistemas Especiales — flujo departamental directo.
+---
+
+# Dashboard Sistemas Especiales
+
+El rol **Sistemas Especiales** es para trabajos de infraestructura o sistemas tecnicos del centro comercial. Opera con flujo departamental directo — sin pasar por revision de Atencion al Cliente.
+
+## Vista principal
+
+| Seccion | Contenido |
+|---|---|
+| **Permisos recientes** | Ultimos permisos creados por Sistemas Especiales |
+| **Permisos de hoy** | Permisos aprobados vigentes para hoy |
+| **Proximos** | Permisos planeados para los proximos 30 dias |
+| **Historial** | Todos los permisos del rol |
+
+## Flujo de aprobacion
+
+1. **Crear permiso** desde Nueva Solicitud
+2. Seleccionar el **departamento tecnico** que revisara el trabajo
+3. El permiso pasa directamente a `en_revision_departamento` — sin pasar por ATC
+4. El departamento asignado revisa y aprueba
+5. Al aprobarse: se genera **QR y PDF** automaticamente
+
+<Callout kind="info">
+**Flujo directo sin ATC**
+
+Los permisos de Sistemas Especiales no requieren clasificacion de riesgo por Atencion al Cliente. El departamento asignado tiene autoridad de aprobacion final.
+</Callout>
+
+## Diferencia con Pabellon M
+
+Ambos roles usan el mismo flujo departamental directo. La diferencia es operacional:
+- **Pabellon M** — solicitudes internas del centro comercial
+- **Sistemas Especiales** — trabajos de infraestructura y sistemas tecnicos especializados
+
+## Acciones disponibles
+
+- Crear permisos con flujo directo a departamento
+- Asignar departamento tecnico al crear
+- Consultar historial, PDF y QR de permisos aprobados
+- Editar permisos mientras esten en revision
+- Cancelar permisos antes de que entren en uso

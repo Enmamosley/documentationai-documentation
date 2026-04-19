@@ -1,39 +1,42 @@
 ---
 title: Notificaciones del Sistema
-description: Guia operativa del sistema de permisos de trabajo.
+description: Tipos de notificaciones internas y a quien le llegan segun el evento.
 ---
 
 # Notificaciones del Sistema
 
-El sistema envía notificaciones para mantenerte informado sobre el estado de los permisos y otras actividades relevantes.
+Las notificaciones aparecen en el **icono de campana** en la barra superior. Cada rol recibe solo las notificaciones relevantes a su funcion.
 
-## Tipos de notificaciones
+## Como acceder
 
-### Notificaciones dentro del sistema
+1. Clic en el icono de **campana**
+2. Ve el listado de notificaciones recientes
+3. Clic en una notificacion para marcarla como leida y ver detalles
+4. **Marcar todas como leidas** para limpiar el contador
 
-- Aparecen en el **icono de campana** :material-bell: en la barra superior
-- Incluyen un **contador** con las notificaciones no leídas
-- Haz clic en la campana para ver el listado
+## Eventos y destinatarios
 
-### Ver todas las notificaciones
+| Tipo | Evento | Quien recibe |
+|---|---|---|
+| `creado` | Permiso creado por contacto | Contacto solicitante |
+| `nueva_solicitud` | Nueva solicitud recibida | Atencion al Cliente |
+| `remision_mantenimiento` | Permiso remitido a departamento | Departamento asignado |
+| `revision_departamento` | Permiso directo a departamento (Pabellon M / Sistemas Especiales) | Departamento asignado |
+| `aprobacion` | Departamento aprobó — esperando visto bueno final | Atencion al Cliente |
+| `aprobado` | Permiso aprobado definitivamente | Contacto solicitante |
+| `rechazo` | Permiso rechazado en cualquier etapa | Contacto solicitante |
 
-1. Haz clic en el icono de **campana**
-2. Selecciona **Ver todas** para acceder al historial completo
+## Filtro por rol
 
-## Eventos que generan notificaciones
+Cada rol ve solo las notificaciones que le corresponden:
 
-| Evento | ¿Quién la recibe? |
-|---|---|
-| Nuevo permiso creado | Atención al Cliente |
-| Permiso escalado a departamento | Departamento correspondiente |
-| Permiso aprobado | Contacto solicitante |
-| Permiso rechazado | Contacto solicitante |
-| Entrada registrada | CCO |
-| Salida registrada | CCO |
-| Permiso vencido | Contacto solicitante |
-| Permiso cancelado automáticamente | Contacto solicitante |
+- **Contacto** — `creado`, `aprobacion`, `aprobado`, `rechazo`
+- **Atencion al Cliente** — `nueva_solicitud`, `aprobacion`
+- **Departamentos** (Mantenimiento, Operaciones, Seguridad, Sistemas Especiales) — `remision_mantenimiento`, `revision_departamento`
+- **CCO / Guardia / Admin** — No tienen notificaciones de tipo estandar
 
-## Marcar como leída
+<Callout kind="info">
+**Mantenimiento no recibe notificacion al crear**
 
-- Haz clic en la notificación para marcarla como leída y ver los detalles
-- Usa **Marcar todas como leídas** para limpiar el contador
+Los permisos de Mantenimiento se auto-aprueban. No generan notificacion `creado` ni `nueva_solicitud` — el permiso queda aprobado directamente.
+</Callout>

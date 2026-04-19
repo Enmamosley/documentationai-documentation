@@ -1,0 +1,81 @@
+---
+title: Flujos por Rol Creador
+description: Como varia el flujo de aprobacion segun el rol que crea el permiso.
+---
+
+# Flujos por Rol Creador
+
+El recorrido de un permiso depende de quien lo crea. El sistema tiene tres flujos configurados mediante **workflow templates**.
+
+## Flujo 1 — Contacto (estandar)
+
+Para empresas externas y proveedores.
+
+```
+Contacto crea permiso
+    ↓
+pendiente_revision
+    ↓ ATC clasifica riesgo
+    ├─ Riesgo bajo → aprobado ✓ (QR + PDF)
+    └─ Riesgo medio/alto → en_revision_departamento
+                               ↓ Departamento tecnico revisa
+                           pendiente_aprobacion_final
+                               ↓ ATC da visto bueno
+                           aprobado ✓ (QR + PDF)
+```
+
+**Notificaciones:**
+- Al crear: ATC recibe `nueva_solicitud`, contacto recibe `creado`
+- Al aprobar (riesgo bajo): contacto recibe `aprobado`
+- Al remitir: departamento recibe `remision_mantenimiento`
+- Al aprobar final: contacto recibe `aprobado`
+- Al rechazar: contacto recibe `rechazo`
+
+## Flujo 2 — Pabellon M y Sistemas Especiales (departamental directo)
+
+Sin intervencion de Atencion al Cliente.
+
+```
+Pabellon M / Sistemas Especiales crea permiso
+    ↓
+en_revision_departamento
+    ↓ Departamento asignado revisa
+aprobado ✓ (QR + PDF)
+```
+
+**Notificaciones:**
+- Al crear: departamento asignado recibe `revision_departamento`
+- Al aprobar: creador recibe `aprobado`
+- Al rechazar: creador recibe `rechazo`
+
+## Flujo 3 — Mantenimiento (auto-aprobacion)
+
+Para actividades propias del centro comercial.
+
+```
+Mantenimiento crea permiso
+    ↓
+aprobado ✓ (QR + PDF inmediatos)
+```
+
+Sin notificaciones ni intervencion manual. El permiso queda aprobado en el momento de la creacion.
+
+## Revision en cadena (multiples departamentos)
+
+Cualquier permiso puede requerir revision de mas de un departamento en secuencia:
+
+```
+en_revision_departamento
+    ↓ Departamento 1 aprueba (orden 1)
+    ↓ Departamento 2 aprueba (orden 2)
+    ↓ Departamento N aprueba (orden N)
+pendiente_aprobacion_final (o aprobado si es flujo directo)
+```
+
+Si cualquier departamento rechaza, el flujo se detiene y el permiso queda en estado `rechazado`.
+
+<Callout kind="info">
+**Configuracion de workflows**
+
+El administrador puede configurar que flujo usa cada rol creador desde **Gestion de Workflows**. Cada plantilla define los pasos, estados y responsables del flujo.
+</Callout>

@@ -56,3 +56,29 @@ Al abrir un permiso, podrás ver:
 Tu aprobación no es la etapa final. El permiso regresa a **Atención al Cliente** para que den el visto bueno definitivo antes de generar el QR.
 
 </Callout>
+
+## Revision en cadena (multiples departamentos)
+
+Un permiso puede requerir la aprobacion de varios departamentos en secuencia:
+
+1. Departamento 1 recibe el permiso (orden 1)
+2. Al aprobar, pasa al Departamento 2 (orden 2)
+3. Continua hasta que todos los departamentos aprueban
+4. Cuando todos aprueban → pasa a `pendiente_aprobacion_final`
+
+Si **cualquier departamento rechaza**, el flujo se detiene y el permiso queda rechazado. No pasa al siguiente departamento.
+
+| Campo registrado | Descripcion |
+|---|---|
+| **Revisado por** | Usuario que aprobó o rechazó |
+| **Fecha de revision** | Cuando se completo la revision |
+| **Comentarios** | Observaciones del departamento |
+| **Estado** | `pendiente`, `aprobado`, o `rechazado` |
+
+## Sistemas Especiales y Pabellon M
+
+Para permisos creados por estos roles, el flujo es diferente:
+
+- El permiso llega **directamente** al departamento (sin revision de ATC primero)
+- Al aprobar el departamento: el permiso queda **aprobado** directamente (no pasa a `pendiente_aprobacion_final`)
+- Se genera QR y PDF en ese momento

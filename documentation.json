@@ -122,6 +122,18 @@
               {
                 "title": "Dashboard Pabellon M",
                 "path": "dashboards/pabellonm"
+              },
+              {
+                "title": "Dashboard Mantenimiento",
+                "path": "dashboards/mantenimiento"
+              },
+              {
+                "title": "Dashboard Sistemas Especiales",
+                "path": "dashboards/sistemas-especiales"
+              },
+              {
+                "title": "Dashboard Departamento Tecnico",
+                "path": "dashboards/departamento"
               }
             ]
           },
@@ -141,6 +153,10 @@
           {
             "group": "Flujo de Aprobacion",
             "pages": [
+              {
+                "title": "Flujos por Rol Creador",
+                "path": "aprobacion/flujos-por-rol"
+              },
               {
                 "title": "Flujo General",
                 "path": "aprobacion/flujo-general"

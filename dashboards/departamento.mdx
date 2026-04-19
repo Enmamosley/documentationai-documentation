@@ -1,0 +1,53 @@
+---
+title: Dashboard Departamento Tecnico
+description: Guia operativa para roles de revision departamental — Operaciones, Seguridad.
+---
+
+# Dashboard Departamento Tecnico
+
+Los roles **Operaciones** y **Seguridad** actuan como departamentos tecnicos de revision. Reciben permisos remitidos por Atencion al Cliente cuando el trabajo es de riesgo medio o alto.
+
+## Vista principal
+
+| Seccion | Contenido |
+|---|---|
+| **Pendientes de revision** | Permisos en `en_revision_departamento` asignados a este departamento |
+| **Aprobados por mi** | Permisos que el departamento ya reviso y aprobo |
+
+## Flujo de revision
+
+Cuando Atencion al Cliente remite un permiso al departamento:
+
+1. El permiso aparece en **Pendientes de revision**
+2. El estado del permiso es `en_revision_departamento`
+3. Revisa: empresa, descripcion del trabajo, area, tecnicos asignados, documentos
+4. Decide:
+   - **Aprobar** — pasa a `pendiente_aprobacion_final` para visto bueno de ATC
+   - **Rechazar** — requiere minimo 10 caracteres de observaciones
+
+<Callout kind="info">
+**Aprobacion intermedia, no final**
+
+La aprobacion del departamento no genera el QR ni el PDF. El permiso pasa a `pendiente_aprobacion_final` donde Atencion al Cliente da el visto bueno definitivo y se generan los documentos.
+</Callout>
+
+## Revision en cadena
+
+Un permiso puede requerir revision de multiples departamentos en secuencia:
+
+- Cada departamento revisa en su turno (segun el orden configurado)
+- Si rechaza cualquiera de ellos, el permiso queda rechazado
+- Solo cuando todos aprueban pasa a `pendiente_aprobacion_final`
+
+<Callout kind="alert">
+**El rechazo cancela la cadena**
+
+Si cualquier departamento en la cadena rechaza el permiso, el flujo se detiene. El solicitante debe crear un nuevo permiso.
+</Callout>
+
+## Acciones disponibles
+
+- Revisar permisos asignados al departamento
+- Aprobar o rechazar con observaciones
+- Descargar PDF de permisos revisados
+- Ver historial de revisiones del departamento

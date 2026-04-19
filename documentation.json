@@ -53,10 +53,6 @@
             "group": "Crear y Gestionar Permisos",
             "pages": [
               {
-                "title": "Que es un Permiso",
-                "path": "permisos/que-es-un-permiso"
-              },
-              {
                 "title": "Crear un Permiso",
                 "path": "permisos/crear-un-permiso"
               },
@@ -75,15 +71,6 @@
               {
                 "title": "Codigo QR",
                 "path": "acceso/codigo-qr"
-              }
-            ]
-          },
-          {
-            "group": "Consulta y Seguimiento",
-            "pages": [
-              {
-                "title": "Estados del Permiso",
-                "path": "permisos/estados-del-permiso"
               }
             ]
           }

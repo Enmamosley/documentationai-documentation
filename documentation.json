@@ -70,9 +70,11 @@
                 "title": "Codigo QR",
                 "path": "acceso/codigo-qr"
               }
-            ]
+            ],
+            "public": true
           }
-        ]
+        ],
+        "public": true
       },
       {
         "tab": "Administración",
@@ -232,7 +234,8 @@
             "title": "Preguntas Frecuentes",
             "path": "help-center/faq/preguntas-frecuentes"
           }
-        ]
+        ],
+        "public": true
       }
     ]
   },

@@ -24,7 +24,8 @@
               {
                 "title": "Inicio",
                 "path": "introduction",
-                "icon": "home"
+                "icon": "home",
+                "public": true
               }
             ]
           },
@@ -43,7 +44,8 @@
                 "title": "Mi Dashboard",
                 "path": "dashboards/contacto"
               }
-            ]
+            ],
+            "public": true
           },
           {
             "group": "Crear y Gestionar Permisos",
